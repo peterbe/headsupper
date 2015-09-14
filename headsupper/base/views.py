@@ -15,27 +15,33 @@ def home(request):
         pass
     if not os.path.isdir(settings.MEDIA_ROOT):
         os.mkdir(settings.MEDIA_ROOT)
-    dbg_filename = os.path.join(
-        settings.MEDIA_ROOT,
-        '%s.json' % int(time.time())
-    )
-    # print request.META.keys()
-    # for key in request.META.keys():
-    #     if not (key.startswith('HTTP') or 'X' in key):
-    #         continue
-    #     print key
-    #     print "\t", str(request.META[key])[:100]
-    #     print
 
+
+    if not request.META.get('HTTP_X_HUB_SIGNATURE'):
+        return http.HttpResponse(
+            'Missing X-Hub-Signature header',
+            status=401
+        )
     github_signature = request.META['HTTP_X_HUB_SIGNATURE']
-    print "GITHUB_SIGNATURE", repr(github_signature)
+    #print "GITHUB_SIGNATURE", repr(github_signature)
     payload = request.body
     # print "PAYLOAD", type(payload), repr(payload)
     signature = 'sha1=' + hmac.new(SECRET, payload, hashlib.sha1).hexdigest()
-    print "SIGNATURE", repr(signature)
-    print hmac.compare_digest(signature, github_signature)
+    #print "SIGNATURE", repr(signature)
+    if not hmac.compare_digest(signature, github_signature):
+        return http.HttpResponse(
+            "Webhook secret doesn't match GitHub signature",
+            status=403
+        )
 
     body = json.loads(payload)
+    dbg_filename = os.path.join(
+        settings.MEDIA_ROOT,
+        '%.3f__%s.json' % (
+            time.time(),
+            github_signature
+        )
+    )
     # print repr(request.body)
     with open(dbg_filename, 'w') as f:
         json.dump(body, f, indent=2)
