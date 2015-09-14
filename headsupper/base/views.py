@@ -72,7 +72,7 @@ def home(request):
     if not project.case_sensitive_trigger_word:
         flags = flags | re.IGNORECASE
     trigger_word = project.trigger_word
-    regex = re.compile('^%s: (.*)' % re.escape(trigger_word), flags)
+    regex = re.compile('^%s(:| )(.*)' % re.escape(trigger_word), flags)
     messages = []
     for commit in body['commits']:
 
@@ -85,11 +85,11 @@ def home(request):
         message = commit['message']
         print regex.findall(message)
         if regex.findall(message):
-            messages.append(regex.findall(message)[0].strip())
+            messages.append(regex.findall(message)[1].strip())
 
     if not messages:
         return http.HttpResponse("No trigger messages\n")
-        
+
     # Is this a tag?
     # Does it have the secret trigger word?
     #
