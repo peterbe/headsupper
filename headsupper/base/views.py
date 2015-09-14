@@ -19,7 +19,7 @@ def home(request):
     )
     print request.META.keys()
     for key in request.META.keys():
-        if not key.startswith('HTTP'):
+        if not (key.startswith('HTTP') or 'X' in key):
             continue
         print key
         print "\t", str(request.META[key])[:100]
