@@ -30,7 +30,7 @@ def home(request):
     github_signature = request.META['HTTP_X_GITHUB_DELIVERY']
     print "GITHUB_SIGNATURE", repr(github_signature)
     payload = request.body
-    signature = hmac.new(SECRET, payload, hashlib.sha256)
+    signature = hmac.new(SECRET, payload, hashlib.sha256).hexdigest()
     print "SIGNATURE", repr(signature)
     print hmac.compare_digest(signature, github_signature)
 
