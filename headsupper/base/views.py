@@ -51,7 +51,6 @@ def home(request):
             status=403
         )
 
-
     dbg_filename = os.path.join(
         settings.MEDIA_ROOT,
         '%.2f__%s.json' % (
@@ -65,7 +64,15 @@ def home(request):
         print dbg_filename
 
     from pprint import pprint
-    # pprint(body)
+    pprint(body)
+
+
+    # it might be a tag!
+    tag = None
+    if body.get('ref', '').startswith('refs/tags'):
+        # It's a tag!
+        tag = "BLA"
+
     author_emails = set()
 
     flags = re.MULTILINE | re.DOTALL
@@ -93,13 +100,15 @@ def home(request):
                 'committer': commit['committer']
             })
 
-    if not messages:
+
+    if tag:
+        # this was a tag
+        print "TAG!"
+    elif not messages:
         return http.HttpResponse("No trigger messages\n")
 
     print "MESSAGES"
     print messages
-
     # Is this a tag?
-    # Does it have the secret trigger word?
-    #
+
     return http.HttpResponse("OK\n")
