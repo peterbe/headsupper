@@ -18,6 +18,10 @@ def home(request):
         '%s.json' % int(time.time())
     )
     print request.META.keys()
+    for key in request.META.keys():
+        print key
+        print "\t", str(request.META[key])[:100]
+        print
     body = json.loads(request.body)
     print repr(request.body)
     with open(dbg_filename, 'w') as f:
