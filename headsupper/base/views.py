@@ -17,6 +17,7 @@ def home(request):
         settings.MEDIA_ROOT,
         '%s.json' % int(time.time())
     )
+    print request.META.keys()
     body = json.loads(request.body)
     print repr(request.body)
     with open(dbg_filename, 'w') as f:
