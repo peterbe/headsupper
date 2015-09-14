@@ -19,11 +19,13 @@ def home(request):
     )
     print request.META.keys()
     for key in request.META.keys():
+        if not key.startswith('HTTP'):
+            continue
         print key
         print "\t", str(request.META[key])[:100]
         print
     body = json.loads(request.body)
-    print repr(request.body)
+    # print repr(request.body)
     with open(dbg_filename, 'w') as f:
         json.dump(body, f, indent=2)
         print dbg_filename
