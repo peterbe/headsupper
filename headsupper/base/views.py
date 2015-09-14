@@ -23,12 +23,12 @@ def home(request):
             status=401
         )
     github_signature = request.META['HTTP_X_HUB_SIGNATURE']
-    #print "GITHUB_SIGNATURE", repr(github_signature)
+    print "GITHUB_SIGNATURE", repr(github_signature)
     payload = request.body
-    # print "PAYLOAD", type(payload), repr(payload)
-    signature = 'sha1=' + hmac.new(SECRET, payload, hashlib.sha1).hexdigest()
-    #print "SIGNATURE", repr(signature)
-    if not hmac.compare_digest(signature, github_signature):
+    print "PAYLOAD", type(payload), repr(payload)
+    signature = hmac.new(SECRET, payload, hashlib.sha1).hexdigest()
+    print "SIGNATURE", repr(signature)
+    if not hmac.compare_digest('sha1=' + signature, github_signature):
         return http.HttpResponse(
             "Webhook secret doesn't match GitHub signature",
             status=403
@@ -37,13 +37,13 @@ def home(request):
     body = json.loads(payload)
     dbg_filename = os.path.join(
         settings.MEDIA_ROOT,
-        '%.3f__%s.json' % (
+        '%.2f__%s.json' % (
             time.time(),
-            github_signature
+            github_signature.replace('sha1=', '')
         )
     )
     # print repr(request.body)
     with open(dbg_filename, 'w') as f:
-        json.dump(body, f, indent=2)
+        f.write(payload)
         print dbg_filename
     return http.HttpResponse("OK\n")
