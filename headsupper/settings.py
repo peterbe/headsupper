@@ -167,3 +167,33 @@ CSP_STYLE_SRC = (
     'http://*.mozilla.net',
     'https://*.mozilla.net',
 )
+
+EMAIL_BACKEND = config(
+    'EMAIL_BACKEND',
+    default='django.core.mail.backends.smtp.EmailBackend'
+)
+EMAIL_HOST = config(
+    'EMAIL_HOST',
+    default='localhost'
+)
+EMAIL_HOST = config(
+    'EMAIL_PORT',
+    default=25,
+    cast=int
+)
+EMAIL_HOST = config(
+    'EMAIL_HOST_USER',
+    default=''
+)
+EMAIL_HOST = config(
+    'EMAIL_HOST_PASSWORD',
+    default=''
+)
+EMAIL_USE_TLS = config(
+    'EMAIL_USE_TLS',
+    False,
+    cast=bool
+)
+
+EMAIL_FROM_NAME = 'Headsupper'
+EMAIL_FROM_EMAIL = 'headsupper@peterbe.com'
