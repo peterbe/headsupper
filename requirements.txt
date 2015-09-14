@@ -34,3 +34,11 @@ django-csp==2.0.3
 # sha256: xO5wy0B_koRResNo8SHPB5anE0uWHlPZ2vGqro9E-5A
 # sha256: APNfsOfi_DSM0JHSXTbGdotyFGPRI5bWipSRqKX5Hs8
 pytz==2015.4
+
+# sha256: b0wujFraFwOf8cHji8Ub6pMXrzZ24oRmFIyN9fx48TI
+django-jinja==1.4.1
+
+
+# sha256: VYVza7U0XcnLcEwSkq997IUSZmqw-RbG8mduDwYCMeg
+# sha256: kpfCKE84KWGnvdmJeFlixWKX1HYUJT57vdglG2nUrOQ
+whitenoise==2.0.2

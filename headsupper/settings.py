@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     # Project specific apps
     'headsupper.base',
 
+    # Third party
+    'django_jinja',
+
     # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
