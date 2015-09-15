@@ -79,8 +79,8 @@ def home(request):
         f.write(payload)
         print dbg_filename
 
-    from pprint import pprint
-    pprint(body)
+    # from pprint import pprint
+    # pprint(body)
 
     # it might be a tag!
     tag_name = tag_url = None
@@ -138,7 +138,6 @@ def home(request):
     )
     print "MESSAGES"
     print messages
-    # Is this a tag?
 
     return http.HttpResponse("OK\n")
 
@@ -151,20 +150,11 @@ def find_commits_messages(project, commits):
         flags = flags | re.IGNORECASE
     trigger_word = project.trigger_word
     regex = re.compile(r'\b%s(:|\!| )(.*)' % re.escape(trigger_word), flags)
-    print regex
 
     messages = []
     for commit in commits:
 
-        # if we do decide to CC the "author" we'll CC the committer too
-        # if commit['author'].get('email'):
-        #     author_emails.add(commit['author']['email'])
-        # if commit['committer'].get('email'):
-        #     author_emails.add(commit['author']['email'])
-
         message = commit['message']
-        print "\t", repr(message)
-        print regex.findall(message)
         if regex.findall(message):
             headsup_message = regex.findall(message)[0][1].strip()
             messages.append({
