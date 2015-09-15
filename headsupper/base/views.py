@@ -61,7 +61,11 @@ def home(request):
         hashlib.sha1
     ).hexdigest()
     # print "SIGNATURE", repr(signature)
-    if not hmac.compare_digest('sha1=' + signature, github_signature):
+    if hasattr('hmac', 'compare_digest'):
+        matched = hmac.compare_digest('sha1=' + signature, github_signature)
+    else:
+        matched = 'sha1=' + signature == github_signature
+    if not matched:
         return http.HttpResponse(
             "Webhook secret doesn't match GitHub signature",
             status=403
