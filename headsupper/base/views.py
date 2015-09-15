@@ -52,15 +52,11 @@ def home(request):
             status=401
         )
     github_signature = request.META['HTTP_X_HUB_SIGNATURE']
-    # print "GITHUB_SIGNATURE", repr(github_signature)
-
-    # print "PAYLOAD", type(payload), repr(payload)
     signature = hmac.new(
         project.github_webhook_secret.encode('utf-8'),
         payload,
         hashlib.sha1
     ).hexdigest()
-    # print "SIGNATURE", repr(signature)
     if hasattr('hmac', 'compare_digest'):
         matched = hmac.compare_digest('sha1=' + signature, github_signature)
     else:
