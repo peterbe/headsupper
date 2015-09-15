@@ -114,6 +114,7 @@ def home(request):
     )
 
     if not messages:
+        print "No trigger messages"
         return http.HttpResponse("No trigger messages\n")
 
     send_messages(
@@ -138,7 +139,9 @@ def find_commits_messages(project, commits):
     if not project.case_sensitive_trigger_word:
         flags = flags | re.IGNORECASE
     trigger_word = project.trigger_word
-    regex = re.compile('^%s(:|\!| )(.*)' % re.escape(trigger_word), flags)
+    regex = re.compile(r'\b%s(:|\!| )(.*)' % re.escape(trigger_word), flags)
+    print regex
+
     messages = []
     for commit in commits:
 
@@ -149,7 +152,8 @@ def find_commits_messages(project, commits):
         #     author_emails.add(commit['author']['email'])
 
         message = commit['message']
-        # print regex.findall(message)
+        print "\t", repr(message)
+        print regex.findall(message)
         if regex.findall(message):
             headsup_message = regex.findall(message)[0][1].strip()
             messages.append({

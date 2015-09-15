@@ -1,0 +1,39 @@
+{% extends "headsupper/email_base.jinja" %}
+
+{% block content %}
+
+<h2>
+    A new set of commits going into
+    <b>{{ project.github_full_name }}</b>
+</h2>
+
+{% if tag and tag.url %}
+    <h3>
+        Tag: <a href="{{ tag.url }}">{{ tag.name }}</a>
+    </h3>
+{% endif %}
+
+
+{% for message in messages %}
+<h4><a href="{{ message.html_url }}">{{ message.message}}</a></h4>
+<p>
+    By
+    {% if message.author.name %}
+        <b>{{ message.author.name }}</b>
+    {% else %}
+        <b>{{ message.author.username }}</b>
+    {% endif %}
+    <br>
+    {% if message.author != message.committer %}
+        Committed by
+        {% if message.committer.name %}
+            <b>{{ message.committer.name }}</b>
+        {% else %}
+            <b>{{ message.committer.username }}</b>
+        {% endif %}
+    {% endif %}
+</p>
+<hr>
+{% endfor %}
+
+{% endblock %}
