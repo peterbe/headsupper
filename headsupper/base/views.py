@@ -2,12 +2,15 @@ import re
 import json
 import os
 import time
-import hashlib, base64, hmac
+import hashlib
+import hmac
+import logging
 
 import requests
 from html2text import html2text
 
 from django import http
+from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
@@ -16,10 +19,16 @@ from django.core.mail import EmailMultiAlternatives
 from .models import Project
 
 
+logger = logging.getLogger('headsupper')
+
+
 @csrf_exempt
 def home(request):
-    if request.method == 'POST':
-        pass
+    if request.method in ('HEAD', 'GET'):
+        return render(request, 'headsupper/home.jinja')
+    if request.method != 'POST':
+        raise http.HttpResponse('Method not allowed', status=405)
+
     if not os.path.isdir(settings.MEDIA_ROOT):
         os.mkdir(settings.MEDIA_ROOT)
 
@@ -28,8 +37,10 @@ def home(request):
 
     try:
         full_name = body['repository']['full_name']
+        logger.info("Received payload from {}".format(full_name))
         project = Project.objects.get(github_full_name=full_name)
     except Project.DoesNotExist:
+        logger.info("No project by the name {}".format(full_name))
         return http.HttpResponse(
             "No project by the name '%s'" % (full_name,),
             status=404

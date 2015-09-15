@@ -21,3 +21,6 @@ class Project(models.Model):
     cc_commit_author = models.BooleanField(default=False)
 
     on_tag_only = models.BooleanField(default=False)
+
+    def __repr__(self):
+        return '<%s %r>' % (self.__class__.__name__, self.github_full_name)
