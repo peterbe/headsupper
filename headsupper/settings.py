@@ -181,11 +181,11 @@ EMAIL_HOST = config(
     default=25,
     cast=int
 )
-EMAIL_HOST = config(
+EMAIL_HOST_USER = config(
     'EMAIL_HOST_USER',
     default=''
 )
-EMAIL_HOST = config(
+EMAIL_HOST_PASSWORD = config(
     'EMAIL_HOST_PASSWORD',
     default=''
 )
