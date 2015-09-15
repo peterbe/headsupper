@@ -123,7 +123,9 @@ def home(request):
             commits = body['commits']
         except KeyError:
             # it could be a test ping or something
-            return http.HttpResponse("Not commits key in body\n")
+            if body['hook']:
+                return http.HttpResponse("Test hook commit push\n")
+            raise
 
     messages = find_commits_messages(
         project,
