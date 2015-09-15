@@ -16,7 +16,7 @@ python-decouple==2.3
 Jinja2==2.8
 
 # sha256: pOwa_1m5WhS0XrLiN2GgF56YMZ2lp-t2tW6ozce4ccM
-#MarkupSafe==0.23
+MarkupSafe==0.23
 
 # sha256: 0yV2uq13_dnmhZvpfCtqPBem9IQ2Q4nbcx8Gl7ehlmE
 django-csp==2.0.3
