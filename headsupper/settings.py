@@ -196,4 +196,4 @@ EMAIL_USE_TLS = config(
 )
 
 EMAIL_FROM_NAME = 'Headsupper'
-EMAIL_FROM_EMAIL = 'headsupper@peterbe.com'
+EMAIL_FROM_EMAIL = 'oi@headsupper.io'
