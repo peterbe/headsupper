@@ -8,8 +8,7 @@ headsupper
 Run the tests
 -------------
 
-There's a sample test in `headsupper/base/tests.py` for your convenience, that
-you can run using the following command:
+To run the tests first install `mock` (`pip install mock`) then run:
 
     python manage.py test
 
@@ -52,15 +51,3 @@ Heroku
 2. heroku config:set DEBUG=False ALLOWED_HOSTS=<foobar>.herokuapp.com, SECRET_KEY=something_secret
    DATABASE_URL gets populated by heroku once you setup a database.
 3. git push heroku master
-
-
-NewRelic Monitoring
--------------------
-
-A newrelic.ini file is already included. To enable NewRelic monitoring
-add two enviroment variables:
-
- - NEW_RELIC_LICENSE_KEY
- - NEW_RELIC_APP_NAME
-
-See the [full list of supported environment variables](https://docs.newrelic.com/docs/agents/python-agent/installation-configuration/python-agent-configuration#environment-variables).
