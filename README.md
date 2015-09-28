@@ -1,7 +1,7 @@
 headsupper
 ==========
 
-[![Build Status](https://img.shields.io/travis/peterbe/headsupper/master.svg)](https://travis-ci.org/peterbe/headsupper)
+[![Build Status](https://travis-ci.org/peterbe/headsupper.svg?branch=master)](https://travis-ci.org/peterbe/headsupper)
 
 [![Coverage status](https://img.shields.io/coveralls/peterbe/headsupper/master.svg)](https://coveralls.io/r/peterbe/headsupper)
 
