@@ -102,7 +102,9 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 MEDIA_ROOT = config('MEDIA_ROOT', default=os.path.join(BASE_DIR, 'media'))
 MEDIA_URL = config('MEDIA_URL', '/media/')
 
-SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', default=not DEBUG, cast=bool)
+SESSION_COOKIE_SECURE = config(
+    'SESSION_COOKIE_SECURE', default=not DEBUG, cast=bool)
+
 
 TEMPLATES = [
     {
@@ -197,3 +199,6 @@ EMAIL_USE_TLS = config(
 
 EMAIL_FROM_NAME = 'Headsupper'
 EMAIL_FROM_EMAIL = 'oi@headsupper.io'
+
+
+GITHUB_API_ROOT = 'https://api.github.com'

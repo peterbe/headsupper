@@ -1,0 +1,2102 @@
+[
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/06df3b109682938b79e68d94aec15a96f4cf29fb", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/06df3b109682938b79e68d94aec15a96f4cf29fb/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/06df3b109682938b79e68d94aec15a96f4cf29fb", 
+    "sha": "06df3b109682938b79e68d94aec15a96f4cf29fb", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/2d170b79a1730971c0ff91aaafb2ca0d7142466f", 
+        "sha": "2d170b79a1730971c0ff91aaafb2ca0d7142466f", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/2d170b79a1730971c0ff91aaafb2ca0d7142466f"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-23T17:57:57Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-23T17:57:57Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/06df3b109682938b79e68d94aec15a96f4cf29fb", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/3c63ce35e0357888723c899d6b35bbd5f9cf0577", 
+        "sha": "3c63ce35e0357888723c899d6b35bbd5f9cf0577"
+      }, 
+      "comment_count": 0, 
+      "message": "change from address"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/2d170b79a1730971c0ff91aaafb2ca0d7142466f", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/2d170b79a1730971c0ff91aaafb2ca0d7142466f/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/2d170b79a1730971c0ff91aaafb2ca0d7142466f", 
+    "sha": "2d170b79a1730971c0ff91aaafb2ca0d7142466f", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4", 
+        "sha": "10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T18:16:41Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T18:16:41Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/2d170b79a1730971c0ff91aaafb2ca0d7142466f", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/1ab360f85673d01c39e6390e75438ee3822bd2f6", 
+        "sha": "1ab360f85673d01c39e6390e75438ee3822bd2f6"
+      }, 
+      "comment_count": 0, 
+      "message": "better test hook feedback"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4", 
+    "sha": "10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/240f8b91e7f550213109127a742a8294e14b92bc", 
+        "sha": "240f8b91e7f550213109127a742a8294e14b92bc", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/240f8b91e7f550213109127a742a8294e14b92bc"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T18:13:59Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T18:13:59Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/10e8dd4d0c15e0f76f99c2f577db49674dd8f8b4", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/ab16dbe762a9b9c9c316a7a4e62f7ed9e30d685e", 
+        "sha": "ab16dbe762a9b9c9c316a7a4e62f7ed9e30d685e"
+      }, 
+      "comment_count": 0, 
+      "message": "prevention if no commits key"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/240f8b91e7f550213109127a742a8294e14b92bc", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/240f8b91e7f550213109127a742a8294e14b92bc/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/240f8b91e7f550213109127a742a8294e14b92bc", 
+    "sha": "240f8b91e7f550213109127a742a8294e14b92bc", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/08a14208fad6a4330c70b013426495aecc411dd5", 
+        "sha": "08a14208fad6a4330c70b013426495aecc411dd5", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/08a14208fad6a4330c70b013426495aecc411dd5"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T16:05:18Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T16:05:18Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/240f8b91e7f550213109127a742a8294e14b92bc", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/ce7c73fa3fb40f58859534d1844c44fdb5f61353", 
+        "sha": "ce7c73fa3fb40f58859534d1844c44fdb5f61353"
+      }, 
+      "comment_count": 0, 
+      "message": "port setting"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/08a14208fad6a4330c70b013426495aecc411dd5", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/08a14208fad6a4330c70b013426495aecc411dd5/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/08a14208fad6a4330c70b013426495aecc411dd5", 
+    "sha": "08a14208fad6a4330c70b013426495aecc411dd5", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/958ceccbb36f0951b9f05a4becb87a4e3d717cad", 
+        "sha": "958ceccbb36f0951b9f05a4becb87a4e3d717cad", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/958ceccbb36f0951b9f05a4becb87a4e3d717cad"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T16:03:58Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T16:03:58Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/08a14208fad6a4330c70b013426495aecc411dd5", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/dfd240bca2e7202b64eda2590039b12ac4fcf364", 
+        "sha": "dfd240bca2e7202b64eda2590039b12ac4fcf364"
+      }, 
+      "comment_count": 0, 
+      "message": "correction settings"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/958ceccbb36f0951b9f05a4becb87a4e3d717cad", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/958ceccbb36f0951b9f05a4becb87a4e3d717cad/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/958ceccbb36f0951b9f05a4becb87a4e3d717cad", 
+    "sha": "958ceccbb36f0951b9f05a4becb87a4e3d717cad", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/046ebf42362bde39036372f7fc16d7ebc67f3c2a", 
+        "sha": "046ebf42362bde39036372f7fc16d7ebc67f3c2a", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/046ebf42362bde39036372f7fc16d7ebc67f3c2a"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T15:54:36Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T15:54:36Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/958ceccbb36f0951b9f05a4becb87a4e3d717cad", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/88d2969b2c1cac456d98012118a158898351dabb", 
+        "sha": "88d2969b2c1cac456d98012118a158898351dabb"
+      }, 
+      "comment_count": 0, 
+      "message": "more cleaning\n\nHeadsup: I'm going to test if email sending works.\nEspecially on two lines."
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/046ebf42362bde39036372f7fc16d7ebc67f3c2a", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/046ebf42362bde39036372f7fc16d7ebc67f3c2a/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/046ebf42362bde39036372f7fc16d7ebc67f3c2a", 
+    "sha": "046ebf42362bde39036372f7fc16d7ebc67f3c2a", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0", 
+        "sha": "ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T15:52:53Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T15:52:53Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/046ebf42362bde39036372f7fc16d7ebc67f3c2a", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/339373d1e0acdc6b724e8c33f44036880f053ee9", 
+        "sha": "339373d1e0acdc6b724e8c33f44036880f053ee9"
+      }, 
+      "comment_count": 0, 
+      "message": "debug removals"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0", 
+    "sha": "ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/65801fb27051c06f1c694c9559acd991d8ff48fb", 
+        "sha": "65801fb27051c06f1c694c9559acd991d8ff48fb", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/65801fb27051c06f1c694c9559acd991d8ff48fb"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T15:52:04Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T15:52:04Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/ad3272fc2e71e261f3b9cb54e3ee2a910ebf4be0", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/9de66ec8791ec2119a63b82318169443c7addf9d", 
+        "sha": "9de66ec8791ec2119a63b82318169443c7addf9d"
+      }, 
+      "comment_count": 0, 
+      "message": "comparison for old python 2.7s"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/65801fb27051c06f1c694c9559acd991d8ff48fb", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/65801fb27051c06f1c694c9559acd991d8ff48fb/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/65801fb27051c06f1c694c9559acd991d8ff48fb", 
+    "sha": "65801fb27051c06f1c694c9559acd991d8ff48fb", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/646a4a6bf50445c2c03a30053db092525a0633cd", 
+        "sha": "646a4a6bf50445c2c03a30053db092525a0633cd", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/646a4a6bf50445c2c03a30053db092525a0633cd"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T15:48:20Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T15:48:20Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/65801fb27051c06f1c694c9559acd991d8ff48fb", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/d29c75f596211bafe2a96cbf2bbd4c747672174d", 
+        "sha": "d29c75f596211bafe2a96cbf2bbd4c747672174d"
+      }, 
+      "comment_count": 0, 
+      "message": "GET page"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/646a4a6bf50445c2c03a30053db092525a0633cd", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/646a4a6bf50445c2c03a30053db092525a0633cd/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/646a4a6bf50445c2c03a30053db092525a0633cd", 
+    "sha": "646a4a6bf50445c2c03a30053db092525a0633cd", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/fb6506f73882a014bd3339e068f3eab6bb7a8885", 
+        "sha": "fb6506f73882a014bd3339e068f3eab6bb7a8885", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/fb6506f73882a014bd3339e068f3eab6bb7a8885"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T15:29:34Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T15:29:34Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/646a4a6bf50445c2c03a30053db092525a0633cd", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/1d32d77b5334220a533b27d77be4d1cc6a4c56c5", 
+        "sha": "1d32d77b5334220a533b27d77be4d1cc6a4c56c5"
+      }, 
+      "comment_count": 0, 
+      "message": "MarkupSafe"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/fb6506f73882a014bd3339e068f3eab6bb7a8885", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/fb6506f73882a014bd3339e068f3eab6bb7a8885/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/fb6506f73882a014bd3339e068f3eab6bb7a8885", 
+    "sha": "fb6506f73882a014bd3339e068f3eab6bb7a8885", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/2f1f205e06bed3d715750816e35af4a21e842e19", 
+        "sha": "2f1f205e06bed3d715750816e35af4a21e842e19", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/2f1f205e06bed3d715750816e35af4a21e842e19"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T15:27:25Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T15:27:25Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/fb6506f73882a014bd3339e068f3eab6bb7a8885", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/be8ecd43a716bd21221e99e19d1025053d401586", 
+        "sha": "be8ecd43a716bd21221e99e19d1025053d401586"
+      }, 
+      "comment_count": 0, 
+      "message": "adding jinja2 2.8"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/2f1f205e06bed3d715750816e35af4a21e842e19", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/2f1f205e06bed3d715750816e35af4a21e842e19/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/2f1f205e06bed3d715750816e35af4a21e842e19", 
+    "sha": "2f1f205e06bed3d715750816e35af4a21e842e19", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/9e6481b2b72abc7b3e589fbe14c1f1398d91936d", 
+        "sha": "9e6481b2b72abc7b3e589fbe14c1f1398d91936d", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/9e6481b2b72abc7b3e589fbe14c1f1398d91936d"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-15T04:15:41Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-15T04:15:41Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/2f1f205e06bed3d715750816e35af4a21e842e19", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/c918f43c49a4c7dd748d2726b3f0f41672a66666", 
+        "sha": "c918f43c49a4c7dd748d2726b3f0f41672a66666"
+      }, 
+      "comment_count": 0, 
+      "message": "sending emails"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/9e6481b2b72abc7b3e589fbe14c1f1398d91936d", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/9e6481b2b72abc7b3e589fbe14c1f1398d91936d/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/9e6481b2b72abc7b3e589fbe14c1f1398d91936d", 
+    "sha": "9e6481b2b72abc7b3e589fbe14c1f1398d91936d", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/7fd2ee538fb8c527248b9d756a25e6da3a535282", 
+        "sha": "7fd2ee538fb8c527248b9d756a25e6da3a535282", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/7fd2ee538fb8c527248b9d756a25e6da3a535282"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T23:43:33Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T23:43:33Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/9e6481b2b72abc7b3e589fbe14c1f1398d91936d", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/230c5febd81d1f02917098c0256bbc0068609bd8", 
+        "sha": "230c5febd81d1f02917098c0256bbc0068609bd8"
+      }, 
+      "comment_count": 0, 
+      "message": "lots more hacking headsup: This changes things"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/7fd2ee538fb8c527248b9d756a25e6da3a535282", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/7fd2ee538fb8c527248b9d756a25e6da3a535282/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/7fd2ee538fb8c527248b9d756a25e6da3a535282", 
+    "sha": "7fd2ee538fb8c527248b9d756a25e6da3a535282", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/6d8ae450186a1da42b405fd9ce86d35aac7d1a0b", 
+        "sha": "6d8ae450186a1da42b405fd9ce86d35aac7d1a0b", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/6d8ae450186a1da42b405fd9ce86d35aac7d1a0b"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T22:43:00Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T22:43:00Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/7fd2ee538fb8c527248b9d756a25e6da3a535282", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/2444bc6fe4b737531ccce54a3d7c745c43e3d310", 
+        "sha": "2444bc6fe4b737531ccce54a3d7c745c43e3d310"
+      }, 
+      "comment_count": 0, 
+      "message": "small changes"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/6d8ae450186a1da42b405fd9ce86d35aac7d1a0b", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/6d8ae450186a1da42b405fd9ce86d35aac7d1a0b/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/6d8ae450186a1da42b405fd9ce86d35aac7d1a0b", 
+    "sha": "6d8ae450186a1da42b405fd9ce86d35aac7d1a0b", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/bdee7bfe344cea676c1a77ff3b5fa70dba45ec26", 
+        "sha": "bdee7bfe344cea676c1a77ff3b5fa70dba45ec26", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/bdee7bfe344cea676c1a77ff3b5fa70dba45ec26"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T22:35:43Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T22:35:43Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/6d8ae450186a1da42b405fd9ce86d35aac7d1a0b", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/90f5b7832be177664ff1afcbea8e3c9789086fb0", 
+        "sha": "90f5b7832be177664ff1afcbea8e3c9789086fb0"
+      }, 
+      "comment_count": 0, 
+      "message": "headsup fixing something important"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/bdee7bfe344cea676c1a77ff3b5fa70dba45ec26", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/bdee7bfe344cea676c1a77ff3b5fa70dba45ec26/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/bdee7bfe344cea676c1a77ff3b5fa70dba45ec26", 
+    "sha": "bdee7bfe344cea676c1a77ff3b5fa70dba45ec26", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/826ebc3104ed3ee4192f94fcd907196915401fff", 
+        "sha": "826ebc3104ed3ee4192f94fcd907196915401fff", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/826ebc3104ed3ee4192f94fcd907196915401fff"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T22:30:08Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T22:30:08Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/bdee7bfe344cea676c1a77ff3b5fa70dba45ec26", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/391c5a0c11c738046b884c84a1245ecac61bece3", 
+        "sha": "391c5a0c11c738046b884c84a1245ecac61bece3"
+      }, 
+      "comment_count": 0, 
+      "message": "last little change"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/826ebc3104ed3ee4192f94fcd907196915401fff", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/826ebc3104ed3ee4192f94fcd907196915401fff/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/826ebc3104ed3ee4192f94fcd907196915401fff", 
+    "sha": "826ebc3104ed3ee4192f94fcd907196915401fff", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/e28e0cab2f4e68002da767e3a1be41127cc152d1", 
+        "sha": "e28e0cab2f4e68002da767e3a1be41127cc152d1", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/e28e0cab2f4e68002da767e3a1be41127cc152d1"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T22:29:09Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T22:29:09Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/826ebc3104ed3ee4192f94fcd907196915401fff", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/efe4f9514a028d5e3a4fc71815615dccbaeab710", 
+        "sha": "efe4f9514a028d5e3a4fc71815615dccbaeab710"
+      }, 
+      "comment_count": 0, 
+      "message": "missing files\n\nHEADSUP This one doesn't have a colon first!"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/e28e0cab2f4e68002da767e3a1be41127cc152d1", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/e28e0cab2f4e68002da767e3a1be41127cc152d1/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/e28e0cab2f4e68002da767e3a1be41127cc152d1", 
+    "sha": "e28e0cab2f4e68002da767e3a1be41127cc152d1", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568", 
+        "sha": "45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T22:28:15Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T22:28:15Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/e28e0cab2f4e68002da767e3a1be41127cc152d1", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/c92d0485524574d27c9561556b4cc893541e9b69", 
+        "sha": "c92d0485524574d27c9561556b4cc893541e9b69"
+      }, 
+      "comment_count": 0, 
+      "message": "Adding admin\n\nheadSup: This adds a new migration.\nThis is the second line.\n\nThis is also down here on this line."
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568", 
+    "sha": "45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/ea96c7a0a3d818aa6e215c110bd5417e6744c42f", 
+        "sha": "ea96c7a0a3d818aa6e215c110bd5417e6744c42f", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/ea96c7a0a3d818aa6e215c110bd5417e6744c42f"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:47:10Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:47:10Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/45b0c2d2e8ee12a8ecb4baf4f8f27ad2a027e568", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/31be5493aa955e016fab854ac704cf63de1bc153", 
+        "sha": "31be5493aa955e016fab854ac704cf63de1bc153"
+      }, 
+      "comment_count": 0, 
+      "message": "debugging tool"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/ea96c7a0a3d818aa6e215c110bd5417e6744c42f", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/ea96c7a0a3d818aa6e215c110bd5417e6744c42f/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/ea96c7a0a3d818aa6e215c110bd5417e6744c42f", 
+    "sha": "ea96c7a0a3d818aa6e215c110bd5417e6744c42f", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/7088482372c225e7e90af4803e6b3723ee7b61f3", 
+        "sha": "7088482372c225e7e90af4803e6b3723ee7b61f3", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/7088482372c225e7e90af4803e6b3723ee7b61f3"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:38:00Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:38:00Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/ea96c7a0a3d818aa6e215c110bd5417e6744c42f", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/695553bd578d46612da056c7c6b15d6a579adf0f", 
+        "sha": "695553bd578d46612da056c7c6b15d6a579adf0f"
+      }, 
+      "comment_count": 0, 
+      "message": "working"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/7088482372c225e7e90af4803e6b3723ee7b61f3", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/7088482372c225e7e90af4803e6b3723ee7b61f3/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/7088482372c225e7e90af4803e6b3723ee7b61f3", 
+    "sha": "7088482372c225e7e90af4803e6b3723ee7b61f3", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba", 
+        "sha": "a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:32:36Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:32:36Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/7088482372c225e7e90af4803e6b3723ee7b61f3", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/f8e450c38daadfc651f6e9c933f6c0c08b43f99c", 
+        "sha": "f8e450c38daadfc651f6e9c933f6c0c08b43f99c"
+      }, 
+      "comment_count": 0, 
+      "message": "use signature"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba", 
+    "sha": "a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/0c37402dc71e492da359848f5b67e32a33284701", 
+        "sha": "0c37402dc71e492da359848f5b67e32a33284701", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/0c37402dc71e492da359848f5b67e32a33284701"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:28:59Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:28:59Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/a20691cfe6d46f44dcb8f83cb3aaf64c2ad549ba", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/21c599abd7e77347583421cabc545e050cde2a8d", 
+        "sha": "21c599abd7e77347583421cabc545e050cde2a8d"
+      }, 
+      "comment_count": 0, 
+      "message": "more printing"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/0c37402dc71e492da359848f5b67e32a33284701", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/0c37402dc71e492da359848f5b67e32a33284701/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/0c37402dc71e492da359848f5b67e32a33284701", 
+    "sha": "0c37402dc71e492da359848f5b67e32a33284701", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0", 
+        "sha": "e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:28:14Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:28:14Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/0c37402dc71e492da359848f5b67e32a33284701", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/be8bd89690ea9b38628188b4064477a4ff9d399c", 
+        "sha": "be8bd89690ea9b38628188b4064477a4ff9d399c"
+      }, 
+      "comment_count": 0, 
+      "message": "sha1="
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0", 
+    "sha": "e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/d2447e70d81bf80870d70ceed6add5480468210f", 
+        "sha": "d2447e70d81bf80870d70ceed6add5480468210f", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/d2447e70d81bf80870d70ceed6add5480468210f"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:26:09Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:26:09Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/e8c6b6c7ae61aa63eea3c28c7e3b7b7a400bcba0", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/30f91d3362dce998d18588da19134ca4251458fe", 
+        "sha": "30f91d3362dce998d18588da19134ca4251458fe"
+      }, 
+      "comment_count": 0, 
+      "message": "sha1"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/d2447e70d81bf80870d70ceed6add5480468210f", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/d2447e70d81bf80870d70ceed6add5480468210f/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/d2447e70d81bf80870d70ceed6add5480468210f", 
+    "sha": "d2447e70d81bf80870d70ceed6add5480468210f", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/6e9a2152b60312c7864024719bd7c39e9cd1015b", 
+        "sha": "6e9a2152b60312c7864024719bd7c39e9cd1015b", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/6e9a2152b60312c7864024719bd7c39e9cd1015b"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:25:36Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:25:36Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/d2447e70d81bf80870d70ceed6add5480468210f", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/569f963fba26c4527ee51e93b855ebe580405f3a", 
+        "sha": "569f963fba26c4527ee51e93b855ebe580405f3a"
+      }, 
+      "comment_count": 0, 
+      "message": "bug fix"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/6e9a2152b60312c7864024719bd7c39e9cd1015b", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/6e9a2152b60312c7864024719bd7c39e9cd1015b/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/6e9a2152b60312c7864024719bd7c39e9cd1015b", 
+    "sha": "6e9a2152b60312c7864024719bd7c39e9cd1015b", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/ba57f38e81a8142acd5a74efaddbf53a0a38e3b9", 
+        "sha": "ba57f38e81a8142acd5a74efaddbf53a0a38e3b9", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/ba57f38e81a8142acd5a74efaddbf53a0a38e3b9"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:25:12Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:25:12Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/6e9a2152b60312c7864024719bd7c39e9cd1015b", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/b31a664d003586d767a578b267ffcf838c2383f5", 
+        "sha": "b31a664d003586d767a578b267ffcf838c2383f5"
+      }, 
+      "comment_count": 0, 
+      "message": "signature"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/ba57f38e81a8142acd5a74efaddbf53a0a38e3b9", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/ba57f38e81a8142acd5a74efaddbf53a0a38e3b9/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/ba57f38e81a8142acd5a74efaddbf53a0a38e3b9", 
+    "sha": "ba57f38e81a8142acd5a74efaddbf53a0a38e3b9", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/7780b004320f74eefd322f5125b24542dc402377", 
+        "sha": "7780b004320f74eefd322f5125b24542dc402377", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/7780b004320f74eefd322f5125b24542dc402377"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:18:28Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:18:28Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/ba57f38e81a8142acd5a74efaddbf53a0a38e3b9", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/4eb8a6fefa6d70b7aedc0ea876423996881b2c4c", 
+        "sha": "4eb8a6fefa6d70b7aedc0ea876423996881b2c4c"
+      }, 
+      "comment_count": 0, 
+      "message": "moar"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/7780b004320f74eefd322f5125b24542dc402377", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/7780b004320f74eefd322f5125b24542dc402377/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/7780b004320f74eefd322f5125b24542dc402377", 
+    "sha": "7780b004320f74eefd322f5125b24542dc402377", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/46d0a94b674311b9f1cc60671a8516bcf091b60c", 
+        "sha": "46d0a94b674311b9f1cc60671a8516bcf091b60c", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/46d0a94b674311b9f1cc60671a8516bcf091b60c"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:15:21Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:15:21Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/7780b004320f74eefd322f5125b24542dc402377", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/8bf230d3cba47b78c79302259c87698d320cec4b", 
+        "sha": "8bf230d3cba47b78c79302259c87698d320cec4b"
+      }, 
+      "comment_count": 0, 
+      "message": "moar"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/46d0a94b674311b9f1cc60671a8516bcf091b60c", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/46d0a94b674311b9f1cc60671a8516bcf091b60c/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/46d0a94b674311b9f1cc60671a8516bcf091b60c", 
+    "sha": "46d0a94b674311b9f1cc60671a8516bcf091b60c", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/406a4b5af2cb23f16d242ea2303d826f26fef551", 
+        "sha": "406a4b5af2cb23f16d242ea2303d826f26fef551", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/406a4b5af2cb23f16d242ea2303d826f26fef551"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:13:40Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:13:40Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/46d0a94b674311b9f1cc60671a8516bcf091b60c", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/d75562da7f711bc8f09fa1d5cebf4086307d3669", 
+        "sha": "d75562da7f711bc8f09fa1d5cebf4086307d3669"
+      }, 
+      "comment_count": 0, 
+      "message": "more debugging"
+    }
+  }, 
+  {
+    "committer": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "author": {
+      "following_url": "https://api.github.com/users/peterbe/following{/other_user}", 
+      "events_url": "https://api.github.com/users/peterbe/events{/privacy}", 
+      "organizations_url": "https://api.github.com/users/peterbe/orgs", 
+      "url": "https://api.github.com/users/peterbe", 
+      "gists_url": "https://api.github.com/users/peterbe/gists{/gist_id}", 
+      "html_url": "https://github.com/peterbe", 
+      "subscriptions_url": "https://api.github.com/users/peterbe/subscriptions", 
+      "avatar_url": "https://avatars.githubusercontent.com/u/26739?v=3", 
+      "repos_url": "https://api.github.com/users/peterbe/repos", 
+      "received_events_url": "https://api.github.com/users/peterbe/received_events", 
+      "gravatar_id": "", 
+      "starred_url": "https://api.github.com/users/peterbe/starred{/owner}{/repo}", 
+      "site_admin": false, 
+      "login": "peterbe", 
+      "type": "User", 
+      "id": 26739, 
+      "followers_url": "https://api.github.com/users/peterbe/followers"
+    }, 
+    "url": "https://api.github.com/repos/peterbe/headsupper/commits/406a4b5af2cb23f16d242ea2303d826f26fef551", 
+    "comments_url": "https://api.github.com/repos/peterbe/headsupper/commits/406a4b5af2cb23f16d242ea2303d826f26fef551/comments", 
+    "html_url": "https://github.com/peterbe/headsupper/commit/406a4b5af2cb23f16d242ea2303d826f26fef551", 
+    "sha": "406a4b5af2cb23f16d242ea2303d826f26fef551", 
+    "parents": [
+      {
+        "url": "https://api.github.com/repos/peterbe/headsupper/commits/4743587c806219a9d7f2476d5d2613d188c5e777", 
+        "sha": "4743587c806219a9d7f2476d5d2613d188c5e777", 
+        "html_url": "https://github.com/peterbe/headsupper/commit/4743587c806219a9d7f2476d5d2613d188c5e777"
+      }
+    ], 
+    "commit": {
+      "committer": {
+        "date": "2015-09-14T21:12:42Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "author": {
+        "date": "2015-09-14T21:12:42Z", 
+        "name": "Peter Bengtsson", 
+        "email": "mail@peterbe.com"
+      }, 
+      "url": "https://api.github.com/repos/peterbe/headsupper/git/commits/406a4b5af2cb23f16d242ea2303d826f26fef551", 
+      "tree": {
+        "url": "https://api.github.com/repos/peterbe/headsupper/git/trees/a310ec69cd4e141eed34cd2181b21b30ba4d0a1e", 
+        "sha": "a310ec69cd4e141eed34cd2181b21b30ba4d0a1e"
+      }, 
+      "comment_count": 0, 
+      "message": "printing headers"
+    }
+  }
+]
