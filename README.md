@@ -1,9 +1,9 @@
 headsupper
 ==========
 
-[![Build Status](https://img.shields.io/travis/mozilla/headsupper/master.svg)](https://travis-ci.org/mozilla/headsupper)
+[![Build Status](https://img.shields.io/travis/peterbe/headsupper/master.svg)](https://travis-ci.org/peterbe/headsupper)
 
-[![Coverage status](https://img.shields.io/coveralls/mozilla/headsupper/master.svg)](https://coveralls.io/r/mozilla/headsupper)
+[![Coverage status](https://img.shields.io/coveralls/peterbe/headsupper/master.svg)](https://coveralls.io/r/peterbe/headsupper)
 
 Run the tests
 -------------
@@ -44,7 +44,7 @@ Docker for deploying to production
 2. Prepare a 'env' file with all the variables needed by dev, stage or production.
 3. Run the image:
 
-    docker run --env-file env -p 80:8000 mozilla/headsupper
+    docker run --env-file env -p 80:8000 peterbe/headsupper
 
 Heroku
 ------
