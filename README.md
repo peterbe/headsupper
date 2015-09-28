@@ -3,7 +3,7 @@ headsupper
 
 [![Build Status](https://travis-ci.org/peterbe/headsupper.svg?branch=master)](https://travis-ci.org/peterbe/headsupper)
 
-[![Coverage status](https://img.shields.io/coveralls/peterbe/headsupper/master.svg)](https://coveralls.io/r/peterbe/headsupper)
+[![Coverage Status](https://coveralls.io/repos/peterbe/headsupper/badge.svg?branch=master&service=github)](https://coveralls.io/github/peterbe/headsupper?branch=master)
 
 Run the tests
 -------------
