@@ -27,9 +27,6 @@ def home(request):
     if request.method != 'POST':
         return http.HttpResponse('Method not allowed', status=405)
 
-    # if not os.path.isdir(settings.MEDIA_ROOT):
-    #     os.mkdir(settings.MEDIA_ROOT)
-
     payload = request.body
     try:
         body = json.loads(payload)
@@ -77,21 +74,6 @@ def home(request):
             status=403
         )
 
-    # dbg_filename = os.path.join(
-    #     settings.MEDIA_ROOT,
-    #     '%.2f__%s.json' % (
-    #         time.time(),
-    #         github_signature.replace('sha1=', '')
-    #     )
-    # )
-    # print repr(request.body)
-    # with open(dbg_filename, 'w') as f:
-    #     f.write(payload)
-    #     print dbg_filename
-
-    # from pprint import pprint
-    # pprint(body)
-
     # it might be a tag!
     tag_name = tag_url = None
     if body.get('ref', '').startswith('refs/tags'):
@@ -99,18 +81,12 @@ def home(request):
         # It's a tag!
         # tag = "BLA"
         # we need to find out what the last tag was
-
         url = settings.GITHUB_API_ROOT + '/repos/%s/tags' % (
             project.github_full_name,
         )
-        # raise Exception(url)
         response = requests.get(url)
         next_is_previous = False
         base_sha = None
-        # with open('tags.json','w') as f:#.write(response.json())
-        #     json.dump(response.json(), f,indent=2)
-        # raise Exception
-        # print response.json()
 
         for tag_commit in response.json():
             if tag_commit['name'] == tag_name:
@@ -131,10 +107,6 @@ def home(request):
         response = requests.get(url)
         commits = []
 
-        # with open('commits.json','w') as f:#.write(response.json())
-        #     json.dump(response.json(),f, indent=2)
-        # raise Exception
-        # print response.json()
         for commit in response.json():
             if commit['sha'] == base_sha:
                 break
@@ -162,8 +134,6 @@ def home(request):
         ping.save()
         return http.HttpResponse("No trigger messages\n")
 
-    # ping.http_error = 201
-    # ping.save()
     ping.messages = messages
     ping.save()
 
@@ -182,8 +152,6 @@ def home(request):
 
 
 def find_commits_messages(project, commits):
-    # author_emails = set()
-
     flags = re.MULTILINE | re.DOTALL
     if not project.case_sensitive_trigger_word:
         flags = flags | re.IGNORECASE
@@ -267,7 +235,6 @@ def send_messages(project, messages, tag=None):
             settings.EMAIL_FROM_EMAIL,
         ),
         to=send_to,
-        # headers=headers,
         cc=send_cc,
         bcc=send_bcc,
     )
