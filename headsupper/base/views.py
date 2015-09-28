@@ -1,7 +1,5 @@
 import re
 import json
-import os
-import time
 import hashlib
 import hmac
 import logging
@@ -16,7 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 
-from .models import Project
+from .models import Project, Payload
 
 
 logger = logging.getLogger('headsupper')
@@ -27,26 +25,36 @@ def home(request):
     if request.method in ('HEAD', 'GET'):
         return render(request, 'headsupper/home.jinja')
     if request.method != 'POST':
-        raise http.HttpResponse('Method not allowed', status=405)
+        return http.HttpResponse('Method not allowed', status=405)
 
-    if not os.path.isdir(settings.MEDIA_ROOT):
-        os.mkdir(settings.MEDIA_ROOT)
+    # if not os.path.isdir(settings.MEDIA_ROOT):
+    #     os.mkdir(settings.MEDIA_ROOT)
 
     payload = request.body
-    body = json.loads(payload)
+    try:
+        body = json.loads(payload)
+    except ValueError:
+        return http.HttpResponseBadRequest("Not a valid JSON payload")
+
+    ping = Payload(payload=body, http_error=201)
 
     try:
         full_name = body['repository']['full_name']
         logger.info("Received payload from {}".format(full_name))
         project = Project.objects.get(github_full_name=full_name)
+        ping.project = project
+        ping.save()
     except Project.DoesNotExist:
         logger.info("No project by the name {}".format(full_name))
+        ping.http_error = 400
+        ping.save()
         return http.HttpResponse(
             "No project by the name '%s'" % (full_name,),
-            status=404
+            status=400
         )
-
     if not request.META.get('HTTP_X_HUB_SIGNATURE'):
+        ping.http_error = 401
+        ping.save()
         return http.HttpResponse(
             'Missing X-Hub-Signature header',
             status=401
@@ -62,22 +70,24 @@ def home(request):
     else:
         matched = 'sha1=' + signature == github_signature
     if not matched:
+        ping.http_error = 403
+        ping.save()
         return http.HttpResponse(
             "Webhook secret doesn't match GitHub signature",
             status=403
         )
 
-    dbg_filename = os.path.join(
-        settings.MEDIA_ROOT,
-        '%.2f__%s.json' % (
-            time.time(),
-            github_signature.replace('sha1=', '')
-        )
-    )
+    # dbg_filename = os.path.join(
+    #     settings.MEDIA_ROOT,
+    #     '%.2f__%s.json' % (
+    #         time.time(),
+    #         github_signature.replace('sha1=', '')
+    #     )
+    # )
     # print repr(request.body)
-    with open(dbg_filename, 'w') as f:
-        f.write(payload)
-        print dbg_filename
+    # with open(dbg_filename, 'w') as f:
+    #     f.write(payload)
+    #     print dbg_filename
 
     # from pprint import pprint
     # pprint(body)
@@ -89,12 +99,19 @@ def home(request):
         # It's a tag!
         # tag = "BLA"
         # we need to find out what the last tag was
-        url = 'https://api.github.com/repos/%s/tags' % (
+
+        url = settings.GITHUB_API_ROOT + '/repos/%s/tags' % (
             project.github_full_name,
         )
+        # raise Exception(url)
         response = requests.get(url)
         next_is_previous = False
         base_sha = None
+        # with open('tags.json','w') as f:#.write(response.json())
+        #     json.dump(response.json(), f,indent=2)
+        # raise Exception
+        # print response.json()
+
         for tag_commit in response.json():
             if tag_commit['name'] == tag_name:
                 next_is_previous = True
@@ -108,11 +125,16 @@ def home(request):
                 )
                 break
         # now we just need to download all those commits in this span
-        url = 'https://api.github.com/repos/%s/commits' % (
+        url = settings.GITHUB_API_ROOT + '/repos/%s/commits' % (
             project.github_full_name,
         )
         response = requests.get(url)
         commits = []
+
+        # with open('commits.json','w') as f:#.write(response.json())
+        #     json.dump(response.json(),f, indent=2)
+        # raise Exception
+        # print response.json()
         for commit in response.json():
             if commit['sha'] == base_sha:
                 break
@@ -124,6 +146,9 @@ def home(request):
         except KeyError:
             # it could be a test ping or something
             if body['hook']:
+                ping.http_error = 200
+                ping.save()
+                raise Exception('bla')
                 return http.HttpResponse("Test hook commit push\n")
             raise
 
@@ -133,8 +158,14 @@ def home(request):
     )
 
     if not messages:
-        print "No trigger messages"
+        ping.http_error = 200
+        ping.save()
         return http.HttpResponse("No trigger messages\n")
+
+    # ping.http_error = 201
+    # ping.save()
+    ping.messages = messages
+    ping.save()
 
     send_messages(
         project,
@@ -144,10 +175,10 @@ def home(request):
             'url': tag_url,
         }
     )
-    print "MESSAGES"
-    print messages
+    # print "MESSAGES"
+    # print messages
 
-    return http.HttpResponse("OK\n")
+    return http.HttpResponse("OK\n", status=201)
 
 
 def find_commits_messages(project, commits):
@@ -241,4 +272,4 @@ def send_messages(project, messages, tag=None):
         bcc=send_bcc,
     )
     email.attach_alternative(html_body, "text/html")
-    print email.send()
+    assert email.send()

@@ -7,5 +7,4 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ('github_full_name', 'trigger_word')
 
 
-
 admin.site.register(Project, ProjectAdmin)

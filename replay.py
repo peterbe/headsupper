@@ -28,7 +28,7 @@ def run(filepath):
 
 
 if __name__ == '__main__':
-    import sys, os
+    import sys
     args = sys.argv[1:]
     if not args or (args and not os.path.isfile(args[0])):
         print "python %s /path/to/saved/1234.0__signature.json" % __file__
