@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # Third party
     'django_jinja',
+    'pipeline',
 
     # Django apps
     'django.contrib.admin',
@@ -50,6 +51,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
 ]
 
 for app in config('EXTRA_APPS', default='', cast=Csv()):
@@ -97,14 +105,25 @@ USE_TZ = config('USE_TZ', default=True, cast=bool)
 
 STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'static'))
 STATIC_URL = config('STATIC_URL', '/static/')
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-MEDIA_ROOT = config('MEDIA_ROOT', default=os.path.join(BASE_DIR, 'media'))
-MEDIA_URL = config('MEDIA_URL', '/media/')
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.CachedFileFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+# MEDIA_ROOT = config('MEDIA_ROOT', default=os.path.join(BASE_DIR, 'media'))
+# MEDIA_URL = config('MEDIA_URL', '/media/')
 
 SESSION_COOKIE_SECURE = config(
     'SESSION_COOKIE_SECURE', default=not DEBUG, cast=bool)
 
+
+from django_jinja.builtins import DEFAULT_EXTENSIONS
 
 TEMPLATES = [
     {
@@ -116,6 +135,10 @@ TEMPLATES = [
             'context_processors': [
                 'headsupper.base.context_processors.settings',
                 'headsupper.base.context_processors.i18n',
+                # 'django.template.context_processors.request', ##???
+            ],
+            'extensions': DEFAULT_EXTENSIONS + [
+                'pipeline.templatetags.ext.PipelineExtension',
             ],
         }
     },
@@ -125,6 +148,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.request',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
@@ -139,35 +163,42 @@ TEMPLATES = [
 # Django-CSP
 CSP_DEFAULT_SRC = (
     "'self'",
+    "'unsafe-inline'",
 )
 CSP_FONT_SRC = (
     "'self'",
-    'http://*.mozilla.net',
-    'https://*.mozilla.net',
-    'http://*.mozilla.org',
-    'https://*.mozilla.org',
+    # 'http://*.mozilla.net',
+    # 'https://*.mozilla.net',
+    # 'http://*.mozilla.org',
+    # 'https://*.mozilla.org',
+    'http://fonts.googleapis.com',
+    'https://fonts.googleapis.com',
+    'http://fonts.gstatic.com',
+    'https://fonts.gstatic.com',
 )
-CSP_IMG_SRC = (
-    "'self'",
-    'http://*.mozilla.net',
-    'https://*.mozilla.net',
-    'http://*.mozilla.org',
-    'https://*.mozilla.org',
-)
-CSP_SCRIPT_SRC = (
-    "'self'",
-    'http://*.mozilla.org',
-    'https://*.mozilla.org',
-    'http://*.mozilla.net',
-    'https://*.mozilla.net',
-)
+# CSP_IMG_SRC = (
+#     "'self'",
+#     'http://*.mozilla.net',
+#     'https://*.mozilla.net',
+#     'http://*.mozilla.org',
+#     'https://*.mozilla.org',
+# )
+# CSP_SCRIPT_SRC = (
+#     "'self'",
+#     'http://*.mozilla.org',
+#     'https://*.mozilla.org',
+#     'http://*.mozilla.net',
+#     'https://*.mozilla.net',
+# )
 CSP_STYLE_SRC = (
     "'self'",
     "'unsafe-inline'",
-    'http://*.mozilla.org',
-    'https://*.mozilla.org',
-    'http://*.mozilla.net',
-    'https://*.mozilla.net',
+    'http://fonts.googleapis.com',
+    'https://fonts.googleapis.com',
+#     'http://*.mozilla.org',
+#     'https://*.mozilla.org',
+#     'http://*.mozilla.net',
+#     'https://*.mozilla.net',
 )
 
 EMAIL_BACKEND = config(
@@ -202,3 +233,52 @@ EMAIL_FROM_EMAIL = 'oi@headsupper.io'
 
 
 GITHUB_API_ROOT = 'https://api.github.com'
+
+
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+SITE_ID = 1
+
+
+LOGIN_REDIRECT_URL = '/'
+
+# django-allauth stuff
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_UNIQUE_EMAIL = False
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # might change this some day
+ACCOUNT_LOGOUT_ON_GET = True  # yolo
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = config(
+    'ACCOUNT_DEFAULT_HTTP_PROTOCOL',
+    default='http'
+)
+
+
+PIPELINE_DISABLE_WRAPPER = True
+PIPELINE_CSS = {
+    'main': {
+        'source_filenames': (
+          'css/semantic.min.css',
+        #   'css/colors/*.css',
+        #   'css/layers.css'
+        ),
+        'output_filename': 'css/semantic.min.css',
+        # 'extra_context': {
+        #     'media': 'screen,projection',
+        # },
+    },
+}
+PIPELINE_JS = {
+    'react': {
+        'source_filenames': (
+          'js/react-0.13.3.min.js',
+          'js/app.jsx',
+        ),
+        'output_filename': 'js/app.js',
+        # 'extra_context': {
+        #     'media': 'screen,projection',
+        # },
+    },
+}

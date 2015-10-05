@@ -13,6 +13,7 @@ from django.template.loader import render_to_string
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
+from django.contrib.auth import get_user_model
 
 from .models import Project, Payload
 
@@ -23,6 +24,7 @@ logger = logging.getLogger('headsupper')
 @csrf_exempt
 def home(request):
     if request.method in ('HEAD', 'GET'):
+        # user_model = get_user_model()
         return render(request, 'headsupper/home.jinja')
     if request.method != 'POST':
         return http.HttpResponse('Method not allowed', status=405)

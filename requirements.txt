@@ -49,3 +49,8 @@ html2text==2015.6.21
 requests==2.7.0
 # sha256: fn9zpnXFGHErrdeDJ54m0WQUDz_C7XoyECw9CKaipKc
 jsonfield==1.0.3
+# sha256: 67kjSmrxku6ahiO8lapstSNVdj0E_u2xmoiM2kC7NGY
+django-allauth==0.23.0
+# sha256: xxHohhXvN7I1nOMJeOrnxl5UkkrrBDIpZWxeI5Bl5ZY
+# sha256: pakJ9APQ6lbyEWGJSf9ON48W5amWvegZvStbDnqbuP4
+django-pipeline==1.5.4
