@@ -1,0 +1,16 @@
+{
+  "name": "Headsupper",
+  "description": "Headsup you by email on git commits",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peterbe/headsupper.git"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "debowerify": "^1.3.1",
+    "react": "^0.13.3"
+  }
+}

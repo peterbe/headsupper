@@ -67,12 +67,12 @@ for app in config('EXTRA_APPS', default='', cast=Csv()):
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'csp.middleware.CSPMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'csp.middleware.CSPMiddleware',
 )
 
 ROOT_URLCONF = 'headsupper.urls'
@@ -81,8 +81,6 @@ WSGI_APPLICATION = 'headsupper.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
 DATABASES = {
     'default': config(
         'DATABASE_URL',
@@ -91,7 +89,6 @@ DATABASES = {
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = config('LANGUAGE_CODE', default='en-us')
 
@@ -107,7 +104,8 @@ STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'static'))
 STATIC_URL = config('STATIC_URL', '/static/')
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -154,7 +152,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
-                'django.contrib.messages.context_processors.messages',
+                # 'django.contrib.messages.context_processors.messages',
             ],
         }
     },
@@ -264,7 +262,7 @@ PIPELINE_CSS = {
         #   'css/colors/*.css',
         #   'css/layers.css'
         ),
-        'output_filename': 'css/semantic.min.css',
+        'output_filename': 'css/main.css',
         # 'extra_context': {
         #     'media': 'screen,projection',
         # },
@@ -273,12 +271,34 @@ PIPELINE_CSS = {
 PIPELINE_JS = {
     'react': {
         'source_filenames': (
-          'js/react-0.13.3.min.js',
-          'js/app.jsx',
+        #   'js/react-0.13.3.min.js',
+          'js/react-0.13.3.js',
         ),
-        'output_filename': 'js/app.js',
+        'output_filename': 'js/react.js',
+        # 'extra_context': {
+        #     'media': 'screen,projection',
+        # },
+    },
+    'main': {
+        'source_filenames': (
+        #   'js/app.jsx',
+        #   'js/require.js',
+        #   'js/app.es6',
+          'js/app.browserify.js',
+        ),
+        'output_filename': 'js/main.js',
         # 'extra_context': {
         #     'media': 'screen,projection',
         # },
     },
 }
+PIPELINE_JS_COMPRESSOR = None
+PIPELINE_COMPILERS = (
+    'pipeline_browserify.compiler.BrowserifyCompiler',
+    # 'pipeline.compilers.es6.ES6Compiler',
+    # 'react.utils.pipeline.JSXCompiler',
+)
+
+PIPELINE_BROWSERIFY_ARGUMENTS = '-t babelify'
+if DEBUG:
+    PIPELINE_BROWSERIFY_ARGUMENTS += ' -d'

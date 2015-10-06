@@ -54,3 +54,10 @@ django-allauth==0.23.0
 # sha256: xxHohhXvN7I1nOMJeOrnxl5UkkrrBDIpZWxeI5Bl5ZY
 # sha256: pakJ9APQ6lbyEWGJSf9ON48W5amWvegZvStbDnqbuP4
 django-pipeline==1.5.4
+# sha256: 8vD3vEj1i6pOtoC1uaYATDdlYBdS8vNmZnflaFsW79E
+PyReact==0.5.2
+# sha256: 1HagO69cARh534AqwbHP69dDxThy6SDQiZJtEyRZnyA
+# sha256: ZhjFSvf8dM1OwEKFM4hdjfu7Mhu4S1F0mIA6dJg4WvA
+PyExecJS==1.1.0
+# sha256: rzV4nwi7JKRqO5pyidbWaHsMN99zNv8u3BfHpsOPLmQ
+django-pipeline-browserify==0.2.0

@@ -7,3 +7,4 @@ MANIFEST
 .coverage
 /media
 /static/
+/node_modules/

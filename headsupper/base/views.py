@@ -24,7 +24,6 @@ logger = logging.getLogger('headsupper')
 @csrf_exempt
 def home(request):
     if request.method in ('HEAD', 'GET'):
-        # user_model = get_user_model()
         return render(request, 'headsupper/home.jinja')
     if request.method != 'POST':
         return http.HttpResponse('Method not allowed', status=405)
