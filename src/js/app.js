@@ -1,21 +1,21 @@
 import React from 'react';
 import 'whatwg-fetch';
 
-
 class Form extends React.Component {
 
   constructor() {
     super();
     this.state = {
         advanced: false,
-        csrfmiddlewaretoken: null
+        csrfmiddlewaretoken: null,
+        case_sensitive_trigger_word: false,
     };
     fetch('/api/csrf')
     .then(function(response) {
       return response.json();
     })
     .then((token) => {
-      this.setState({csrfmiddlewaretoken: token});
+      this.setState({csrfmiddlewaretoken: token.csrf_token});
     })
     .catch((ex) => {
       alert(ex);
@@ -26,11 +26,35 @@ class Form extends React.Component {
     this.setState({advanced: !this.state.advanced});
   }
 
+  // onChangeCheckbox(field) {
+  //   return (e) => {
+  //     console.log('event', e)
+  //     console.log('field', field)
+  //   }
+  // }
+  onChangeCheckbox(e) {
+      console.log('event', e)
+      console.log(this.state.case_sensitive_trigger_word);
+      this.setState({case_sensitive_trigger_word: !this.state.case_sensitive_trigger_word});
+  }
+
   submitForm(event) {
     event.preventDefault();
     if (!this.state.csrfmiddlewaretoken) {
       throw new Error("No CSRF token aquired");
     }
+    var data = {};
+    data.csrfmiddlewaretoken = this.state.csrfmiddlewaretoken;
+    // console.log(this.refs);
+
+    let getValue = (ref) => {
+      return React.findDOMNode(ref).value.trim();
+    }
+    data.github_full_name = getValue(this.refs.github_full_name);
+    data.trigger_word = getValue(this.refs.trigger_word);
+    console.log(this.refs.case_sensitive_trigger_word);
+    // data.case_sensitive_trigger_word = getValue(this.refs.case_sensitive_trigger_word);
+    console.log(data);
     console.log('SUBMIT!');
   }
 
@@ -46,7 +70,7 @@ class Form extends React.Component {
       <div className="field required">
         <label>GitHub Full Name</label>
         <input
-            name="github_full_name"
+            ref="github_full_name"
             tabIndex="0"
             placeholder="e.g. mozilla/socorro"
             type="text"/>
@@ -54,18 +78,20 @@ class Form extends React.Component {
       <div className={this.state.advanced ? 'field' : 'hidden'}>
         <label>Trigger Word</label>
         <input
-            name="trigger_word"
+            ref="trigger_word"
             tabIndex="1"
             defaultValue="Headsup"
             type="text"/>
       </div>
       <div className={this.state.advanced ? 'field' : 'hidden'}>
-        <div className="ui checkbox">
+        <div className="ui checkbox" onClick={this.onChangeCheckbox.bind(this)}>
           <input
               className="hidden"
-              name="case_sensitive_trigger_word"
+              ref="case_sensitive_trigger_word"
               tabIndex="2"
-              type="checkbox"/>
+              type="checkbox"
+              checked="{this.state.case_sensitive_trigger_word}"
+              />
             <label>Case-<b>sensitive</b> trigger word</label>
         </div>
       </div>

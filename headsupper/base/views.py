@@ -18,7 +18,7 @@ from django.contrib.auth import get_user_model
 from .models import Project, Payload
 
 
-logger = logging.getLogger('headsupper')
+logger = logging.getLogger('headsupper.base')
 
 
 @csrf_exempt
