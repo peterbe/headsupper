@@ -174,6 +174,13 @@ def find_commits_messages(project, commits):
     return messages
 
 
+def extract_email_addresses(text):
+    return [
+        x.strip() for x in text.replace(';', '\n').splitlines()
+        if x.strip()
+    ]
+
+
 def send_messages(project, messages, tag=None):
     """this @messages is a list of dicts that look like this:
         [
@@ -216,11 +223,6 @@ def send_messages(project, messages, tag=None):
     )
     body = html2text(html_body)
 
-    def extract_email_addresses(text):
-        return [
-            x.strip() for x in text.replace(';', '\n').splitlines()
-            if x.strip()
-        ]
     send_to = extract_email_addresses(project.send_to)
     send_cc = None
     if project.send_cc:

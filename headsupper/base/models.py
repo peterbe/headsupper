@@ -13,9 +13,7 @@ class Project(models.Model):
     case_sensitive_trigger_word = models.BooleanField(default=False)
 
     # optional
-    github_webhook_secret = models.CharField(
-        blank=True, null=True, max_length=100
-    )
+    github_webhook_secret = models.CharField(max_length=100)
 
     # email(s)
     send_to = models.TextField()
