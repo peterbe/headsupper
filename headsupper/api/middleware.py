@@ -15,7 +15,7 @@ class JsonBodyCsrfViewMiddleware(CsrfViewMiddleware):
                 body['csrfmiddlewaretoken']
             )
         except ValueError:
-            if request.body:
+            if request.body and not request.path.startswith('/admin'):
                 raise
         return super(JsonBodyCsrfViewMiddleware, self).process_view(
             request, view_func, view_args, view_kwargs
