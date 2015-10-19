@@ -5,8 +5,8 @@ from django.middleware.csrf import CsrfViewMiddleware
 
 class JsonBodyCsrfViewMiddleware(CsrfViewMiddleware):
 
-    def process_view(self, request, callback, *args, **kwargs):
-        if getattr(callback, 'csrf_exempt', False):
+    def process_view(self, request, callback=None, *args, **kwargs):
+        if callback and getattr(callback, 'csrf_exempt', False):
             return None
         try:
             body = json.loads(request.body)
