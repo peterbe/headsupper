@@ -177,7 +177,7 @@ class Form extends React.Component {
               tabIndex="30"
               type="checkbox"
               />
-            <label>Case-<b>sensitive</b> trigger word</label>
+            <label>Case-<b>sensitive</b> trigger</label>
         </div>
       </div>
       <div className={getFieldClassName('send_to')}>
@@ -266,14 +266,149 @@ class SuccessMessage extends React.Component {
   }
 }
 
+class ProjectDetailsTable extends React.Component {
+  render() {
+    let project = this.props.project;
+    return <table className="ui compact table">
+      <tbody>
+        <tr>
+          <th>Trigger Word</th>
+          <td>{project.trigger_word}</td>
+        </tr>
+        <tr>
+          <th>Case-<b>sensitive</b> trigger</th>
+          <td>
+            <i className={'large icon ' + (project.case_sensitive_trigger_word ? 'green checkmark' : 'red minus')}>
+            </i>
+          </td>
+        </tr>
+        <tr>
+          <th>Send CC</th>
+          <td>{project.send_cc ? project.send_cc : 'none'}</td>
+        </tr>
+        <tr>
+          <th>Send BCC</th>
+          <td>{project.send_bcc}</td>
+        </tr>
+        <tr>
+          <th>CC the commit author always</th>
+          <td>
+            <i className={'large icon ' + (project.cc_commit_author ? 'green checkmark' : 'red minus')}>
+            </i>
+          </td>
+        </tr>
+        <tr>
+          <th>Only send when a new tag is created</th>
+          <td>
+            <i className={'large icon ' + (project.on_tag_only ? 'green checkmark' : 'red minus')}>
+            </i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  }
+}
+
+
+class ProjectsTable extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      expanded: {}
+    };
+  }
+
+  toggleExpansion(key) {
+    let expanded = this.state.expanded;
+    expanded[key] = !expanded[key];
+    this.setState({expanded: expanded});
+  }
+
+  trs(project) {
+    let rows = [];
+    let row1 = <tr>
+      <td>
+        <h3 className="single line">
+          <a href={'https://github.com/' + project.github_full_name}>
+            {project.github_full_name}
+          </a>
+        </h3>
+      </td>
+      <td className="single line">
+        <code>{project.github_webhook_secret}</code>
+      </td>
+      <td>
+        {project.send_to}
+      </td>
+      <td>
+        <button
+          className="small ui labeled icon button"
+          onClick={this.toggleExpansion.bind(this, project.key)}>
+          <i className={'icon ' + (this.state.expanded[project.key] ? 'compress' : 'expand')}></i>
+          {this.state.expanded[project.key] ? 'show less' : 'show more'}
+        </button>
+      </td>
+    </tr>;
+    rows.push(row1);
+    if (this.state.expanded[project.key]) {
+      let row2 = <tr>
+        <td colSpan="2">
+          <ProjectDetailsTable project={project}/>
+        </td>
+      </tr>;
+      rows.push(row2);
+    }
+    return rows;
+  }
+
+  render() {
+    return <div>
+      <h2 className="ui dividing header">Existing Configurations</h2>
+      <table className="ui compact table">
+        <thead>
+          <tr>
+            <th>GitHub Full Name</th>
+            <th>GitHub Webhook Secret</th>
+            <th>Send to</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            this.props.projects.map((project) => {
+              return this.trs(project)
+          })
+        }
+        </tbody>
+      </table>
+    </div>
+  }
+}
+
 class Instructions extends React.Component {
   constructor() {
     super();
     this.state = {
       successMessage: false,
+      projects: [],
       instructionSecret: 'your secret',
       payloadUrl: 'https://headsupper.dev',  // XXX be starter about this
     };
+
+    this.loadPastProjects();
+  }
+
+  loadPastProjects() {
+    fetch('/api/projects', {credentials: 'same-origin'})
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      this.setState({projects: json.projects});
+    })
+    .catch((ex) => {
+      alert(ex);
+    });
   }
 
   onSave(secret) {
@@ -289,8 +424,10 @@ class Instructions extends React.Component {
       <div>
         { this.state.successMessage ? <SuccessMessage/> : null }
 
+        { this.state.projects.length ? <ProjectsTable projects={this.state.projects}/> : null}
+
         <h2 className="ui dividing header">
-          1. Prepare your first configuration
+          1. { this.state.projects.length ? 'Prepare another configuration' : 'Prepare your first configuration' }
         </h2>
 
         <Form onSave={this.onSave.bind(this)}/>
@@ -325,13 +462,15 @@ class Homepage extends React.Component {
     super();
     this.state = {
       signedin: null,
+      projects: [],
     };
-    fetch('/api/projects', {credentials: 'same-origin'})
+    fetch('/api/signedin', {credentials: 'same-origin'})
     .then((response) => {
       return response.json();
     })
     .then((signedin) => {
       this.setState({signedin: signedin});
+
     })
     .catch((ex) => {
       alert(ex);
