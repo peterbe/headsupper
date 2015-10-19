@@ -9,6 +9,7 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.conf import settings
 from django.core import mail
+from django.contrib.auth import get_user_model
 
 from headsupper.base.models import Project, Payload
 
@@ -49,6 +50,8 @@ class Tests(TestCase):
     def setUpClass(cls):
         super(Tests, cls).setUpClass()
         settings.GITHUB_API_ROOT = 'https://api-example'
+
+        cls.user = get_user_model().objects.create(username='peterbe')
 
     url = reverse('home')
 
@@ -97,6 +100,7 @@ class Tests(TestCase):
         project = Project.objects.create(
             github_full_name='peterbe/headsupper',
             github_webhook_secret='secret',
+            creator=self.user,
 
         )
         response = self._send('first-line')
@@ -111,6 +115,7 @@ class Tests(TestCase):
         project = Project.objects.create(
             github_full_name='peterbe/headsupper',
             github_webhook_secret='secret',
+            creator=self.user,
 
         )
         response = self._send('first-line', 'different')
@@ -125,6 +130,7 @@ class Tests(TestCase):
             github_full_name='peterbe/headsupper',
             github_webhook_secret='secret',
             send_to='peterbe@example.com',
+            creator=self.user,
         )
         response = self._send('first-line', 'secret')
         self.assertEqual(response.status_code, 201)
@@ -156,6 +162,7 @@ class Tests(TestCase):
             github_webhook_secret='secret',
             on_tag_only=True,
             send_to='peterbe@example.com',
+            creator=self.user,
         )
         response = self._send('tagged', 'secret')
         self.assertEqual(response.status_code, 201)
