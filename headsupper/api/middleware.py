@@ -5,8 +5,8 @@ from django.middleware.csrf import CsrfViewMiddleware
 
 class JsonBodyCsrfViewMiddleware(CsrfViewMiddleware):
 
-    def process_view(self, request, callback=None, *args, **kwargs):
-        if callback and getattr(callback, 'csrf_exempt', False):
+    def process_view(self, request, view_func, view_args, view_kwargs):
+        if getattr(view_func, 'csrf_exempt', False):
             return None
         try:
             body = json.loads(request.body)
@@ -18,5 +18,5 @@ class JsonBodyCsrfViewMiddleware(CsrfViewMiddleware):
             if request.body:
                 raise
         return super(JsonBodyCsrfViewMiddleware, self).process_view(
-            request, *args, **kwargs
+            request, view_func, view_args, view_kwargs
         )
