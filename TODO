@@ -1,0 +1,7 @@
+* run `npm run deploy` in travis and see that it worked
+
+* Ability to delete a config
+
+* ability to see past payloads
+
+* Clean away all django-pipeline or jinja junk we don't need
