@@ -8,12 +8,10 @@ import requests
 from html2text import html2text
 
 from django import http
-from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
-from django.contrib.auth import get_user_model
 
 from .models import Project, Payload
 

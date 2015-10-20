@@ -24,7 +24,6 @@ class ProjectForm(forms.ModelForm):
     def _clean_send_emails(self, key, required=False):
         value = self.cleaned_data[key]
         emails = extract_email_addresses(value)
-        checked = []
         for email in emails:
             try:
                 validate_email(email)

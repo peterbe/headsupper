@@ -195,10 +195,6 @@ CSP_STYLE_SRC = (
     "'unsafe-inline'",
     'http://fonts.googleapis.com',
     'https://fonts.googleapis.com',
-#     'http://*.mozilla.org',
-#     'https://*.mozilla.org',
-#     'http://*.mozilla.net',
-#     'https://*.mozilla.net',
 )
 
 EMAIL_BACKEND = config(
