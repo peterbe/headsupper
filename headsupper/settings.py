@@ -228,7 +228,7 @@ EMAIL_USE_TLS = config(
     cast=bool
 )
 
-EMAIL_FROM_NAME = 'Headsupper'
+EMAIL_FROM_NAME = 'Headsupper.io'
 EMAIL_FROM_EMAIL = 'oi@headsupper.io'
 
 
