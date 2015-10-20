@@ -29,24 +29,21 @@ Oh, and you might want to change the "Build Status" and "Coverage Status" links
 at the top of this file to point to your own travis and coveralls accounts.
 
 
-Docker for development
-----------------------
+Build the production bundle
+---------------------------
 
-0. Make sure you have [docker](https://docker.io) and [docker-compose](https://github.com/docker/compose)
-1. docker-compose up
+This has nothing to do with Django. This is pure `npm`:
 
+    npm run deploy
 
-Docker for deploying to production
------------------------------------
-
-1. Add your project in [Docker Registry](https://registry.hub.docker.com/) as [Automated Build](http://docs.docker.com/docker-hub/builds/)
-2. Prepare a 'env' file with all the variables needed by dev, stage or production.
-3. Run the image:
-
-    docker run --env-file env -p 80:8000 peterbe/headsupper
+That'll create a `dist/bundle.js` monster with all the Javascript you
+need.
 
 Heroku
 ------
+
+(These instructions are not maintained!)
+
 1. heroku create
 2. heroku config:set DEBUG=False ALLOWED_HOSTS=<foobar>.herokuapp.com, SECRET_KEY=something_secret
    DATABASE_URL gets populated by heroku once you setup a database.
