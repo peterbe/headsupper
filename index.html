@@ -12,6 +12,7 @@
   href="//fonts.googleapis.com/css?family=Lato:400,700,400italic&amp;subset=latin"
   rel="stylesheet"
   type="text/css"> -->
+  <link href='//fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/semantic.min.css">
   <style type="text/css">
@@ -38,6 +39,46 @@
       margin: 5em 0em 0em;
       padding: 5em 0em;
     }
+    code {
+      margin: 0px;
+      padding: 0.2em 0.2em;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+    }
+    ol.list.instruction-steps li {
+      padding: 0.6em 0px;
+    }
+
+    /* overlay trickery */
+    .overlay-instructions {
+      position: relative;
+    }
+    .overlay-instruction {
+      position: absolute;
+      /*background-color: #FAFAFA;*/
+      font-family: 'Handlee', cursive;
+      /*font-family: 'Indie Flower', cursive;*/
+      /*font-family: 'Courier New', Courier;*/
+    }
+    .overlay-instruction.overlay-header {
+      top: 8px;
+      left: 396px;
+      font-size: 1.2em;
+    }
+    .overlay-instruction.overlay-url {
+      top: 136px;
+      left: 32px;
+    }
+    .overlay-instruction.overlay-secret {
+      top: 241px;
+      left: 32px;
+    }
+    .overlay-instruction.overlay-button-arrow {
+      top: 429px;
+      left: 118px;
+      font-size: 1em;
+    }
+
   </style>
 </head>
 <body>

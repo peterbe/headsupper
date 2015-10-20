@@ -99,12 +99,21 @@ class Form extends React.Component {
         if (this.state.errors !== null) {
           this.setState({errors: null});
         }
-        this.props.onSave(secret);
+        this.props.onSave(json.project);
       }
     })
     .catch((ex) => {
       console.log('parsing failed', ex)
     });
+  }
+
+  previewGitHubProject(event) {
+    let currentTarget = event.currentTarget;
+    setTimeout(() => {
+      if (!currentTarget.contains(document.activeElement)) {
+          console.log('component officially blurred', currentTarget.value);
+      }
+    }, 0);
   }
 
   render() {
@@ -142,7 +151,7 @@ class Form extends React.Component {
       <div className="ui toggle checkbox" style={{float:'right'}}>
         <input
             name="advanced" type="checkbox"
-            onChange={this.toggleAdvancedForm.bind(this)}/>
+            onInput={this.toggleAdvancedForm.bind(this)}/>
         <label>Toggle advanced fields</label>
       </div>
 
@@ -150,16 +159,17 @@ class Form extends React.Component {
         <label>GitHub Full Name</label>
         <input
             ref="github_full_name"
-            tabIndex="0"
+            tabIndex="1"
             placeholder="e.g. mozilla/socorro"
+            onBlur={this.previewGitHubProject.bind(this)}
             type="text"/>
       </div>
       <div className={getFieldClassName('github_webhook_secret')}>
         <label>GitHub Webhook Secret</label>
         <input
             ref="github_webhook_secret"
-            tabIndex="10"
-            placeholder="pick a secret word"
+            tabIndex="2"
+            placeholder="pick a secret word or short sentence"
             type="text"/>
       </div>
       <div className={getFieldClassName('trigger_word')}>
@@ -318,10 +328,11 @@ class ProjectsTable extends React.Component {
     };
   }
 
-  toggleExpansion(key) {
+  toggleExpansion(project) {
     let expanded = this.state.expanded;
-    expanded[key] = !expanded[key];
+    expanded[project.key] = !expanded[project.key];
     this.setState({expanded: expanded});
+    this.props.onExpansion(project, expanded[project.key]);
   }
 
   trs(project) {
@@ -343,7 +354,7 @@ class ProjectsTable extends React.Component {
       <td>
         <button
           className="small ui labeled icon button"
-          onClick={this.toggleExpansion.bind(this, project.key)}>
+          onClick={this.toggleExpansion.bind(this, project)}>
           <i className={'icon ' + (this.state.expanded[project.key] ? 'compress' : 'expand')}></i>
           {this.state.expanded[project.key] ? 'show less' : 'show more'}
         </button>
@@ -385,16 +396,62 @@ class ProjectsTable extends React.Component {
   }
 }
 
+
+class ProjectInstructions extends React.Component {
+  render() {
+    let payloadUrl = document.location.protocol + '//' + document.location.hostname;
+    let project = this.props.project;
+    let url = 'https://github.com/' + project.github_full_name + '/settings/hooks/new';
+    return (
+      <div className="ui grid">
+        <div className="eight wide column">
+          <ol className="ui list instruction-steps">
+            <li>
+              <a href={url}>Go to the <code>{project.github_full_name}</code> <b>Add webhook</b> page</a>
+            </li>
+            <li>
+              On <b>Payload URL</b> type in <code>{payloadUrl}</code>
+            </li>
+            <li>
+              On <b>Content type</b> leave it set to <code>application/json</code>
+            </li>
+            <li>
+              On <b>Secret</b> type in <code>{this.props.project.github_webhook_secret}</code>
+            </li>
+            <li>On <b>Which events would you like to trigger this webhook?</b> keep to on <code>Just the push event</code></li>
+            <li>Leave the <b>Active</b> checkbox on</li>
+            <li>Press the green <b>Add webhook</b> button</li>
+            <li><b>Profit!</b> Start using the keyword (<code>{this.props.project.trigger_word}</code>) in your commit messages</li>
+          </ol>
+        </div>
+        <div className="eight wide column overlay-instructions">
+          <img src="images/webhookscreenshot-smaller.png" alt="Screenshot"/>
+          <span className="overlay-instruction overlay-header">
+            Screenshot sample
+          </span>
+          <span className="overlay-instruction overlay-url">
+            {payloadUrl}
+          </span>
+          <span className="overlay-instruction overlay-secret">
+            {this.props.project.github_webhook_secret}
+          </span>
+          <span className="overlay-instruction overlay-button-arrow">← press this when done</span>
+        </div>
+      </div>
+      )
+  }
+}
+
+
+
 class Instructions extends React.Component {
   constructor() {
     super();
     this.state = {
       successMessage: false,
       projects: [],
-      instructionSecret: 'your secret',
-      payloadUrl: 'https://headsupper.dev',  // XXX be starter about this
+      project: null,
     };
-
     this.loadPastProjects();
   }
 
@@ -411,12 +468,34 @@ class Instructions extends React.Component {
     });
   }
 
-  onSave(secret) {
-    this.setState({successMessage: true, instructionSecret: secret});
+  onSave(project) {
+    this.setState({successMessage: true, project: project});
     setTimeout(() => {
       this.setState({successMessage: false});
     }, 5000);
     this.loadPastProjects();
+  }
+
+  onExpansion(project, expanded) {
+    if (expanded) {
+      this.setState({project: project});
+    } else {
+      this.setState({project: null});
+    }
+  }
+
+  formOuter() {
+    if (this.state.project !== null) {
+      return null;  // don't render anything
+    }
+    return (
+      <div>
+        <h2 className="ui dividing header">
+          1. { this.state.projects.length ? 'Prepare another configuration' : 'Prepare your first configuration' }
+        </h2>
+        <Form onSave={this.onSave.bind(this)}/>
+      </div>
+    )
   }
 
   render() {
@@ -424,34 +503,16 @@ class Instructions extends React.Component {
       <div>
         { this.state.successMessage ? <SuccessMessage/> : null }
 
-        { this.state.projects.length ? <ProjectsTable projects={this.state.projects}/> : null}
+        { this.state.projects.length ? <ProjectsTable projects={this.state.projects} onExpansion={this.onExpansion.bind(this)}/> : null}
+
+        { this.formOuter(this,this.state.project) }
 
         <h2 className="ui dividing header">
-          1. { this.state.projects.length ? 'Prepare another configuration' : 'Prepare your first configuration' }
+          {this.state.project ? 'Tell GitHub about it' : '2. Tell GitHub about it'}
         </h2>
 
-        <Form onSave={this.onSave.bind(this)}/>
+        {this.state.project ? <ProjectInstructions project={this.state.project}/> : <i>Awaiting configuration</i>}
 
-        <h2 className="ui dividing header">
-          2. Tell GitHub about it
-        </h2>
-        <ol>
-          <li>Go to your repository's Settings page</li>
-          <li>Click on <b>Webhooks &amp; services</b></li>
-          <li>Click the "Add webhook" button</li>
-          <li>
-            <ol>
-              <li>On <b>Payload URL</b> type in <code>{this.state.payloadUrl}</code></li>
-              <li>On <b>Content type</b> leave it set to <code>application/json</code></li>
-              <li>On <b>Secret</b> type in <code>{this.state.instructionSecret}</code></li>
-              <li>On <b>Which events would you like to trigger this webhook?</b>
-                keep to on
-                <code>Just the push event</code></li>
-              <li>Leave the <b>Active</b> checkbox on</li>
-            </ol>
-          </li>
-          <li>Press the green <b>Add webhook</b> button</li>
-        </ol>
       </div>
     )
   }

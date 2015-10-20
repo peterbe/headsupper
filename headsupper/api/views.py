@@ -40,7 +40,8 @@ def csrfmiddlewaretoken(request):
 @login_required
 def list_projects(request):
     projects = []
-    for project in Project.objects.filter(creator=request.user).order_by('-created'):
+    qs = Project.objects.filter(creator=request.user)
+    for project in qs.order_by('created'):
         p = model_to_dict(project)
         p['key'] = p.pop('id')
         projects.append(p)
@@ -67,4 +68,6 @@ def add_project(request):
         cc_commit_author=cd['cc_commit_author'],
         on_tag_only=cd['on_tag_only'],
     )
-    return http.JsonResponse({'ok': project.id})
+    p = model_to_dict(project)
+    p['key'] = p.pop('id')
+    return http.JsonResponse({'project': p})

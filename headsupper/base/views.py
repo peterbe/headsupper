@@ -23,8 +23,12 @@ logger = logging.getLogger('headsupper.base')
 
 @csrf_exempt
 def home(request):
-    if request.method in ('HEAD', 'GET'):
-        return render(request, 'headsupper/home.jinja')
+    if request.method == 'HEAD':
+        return http.HttpResponse('OK\n')
+    if request.method == 'GET':
+        return http.HttpResponse(
+            'You should be seeing the static index.html page\n'
+        )
     if request.method != 'POST':
         return http.HttpResponse('Method not allowed', status=405)
 
@@ -121,7 +125,6 @@ def home(request):
             if body['hook']:
                 ping.http_error = 200
                 ping.save()
-                raise Exception('bla')
                 return http.HttpResponse("Test hook commit push\n")
             raise
 
