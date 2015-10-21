@@ -1,4 +1,5 @@
-* fix bug with toggling on the advanced fields
+TODO
+----
 
 * /about page
 
@@ -13,3 +14,10 @@
 * Add a note at the bottom of the instructions that says to expect an
   email from `Headsupper.io <oi@headsupper.io>` that might need to be
   manually approved from your spam folder.
+
+
+
+DONE
+----
+
+* fix bug with toggling on the advanced fields

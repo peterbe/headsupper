@@ -151,7 +151,7 @@ class Form extends React.Component {
       <div className="ui toggle checkbox" style={{float:'right'}}>
         <input
             name="advanced" type="checkbox"
-            onInput={this.toggleAdvancedForm.bind(this)}/>
+            onChange={this.toggleAdvancedForm.bind(this)}/>
         <label>Toggle advanced fields</label>
       </div>
 
