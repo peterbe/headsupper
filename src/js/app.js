@@ -335,6 +335,16 @@ class ProjectsTable extends React.Component {
     this.props.onExpansion(project, expanded[project.key]);
   }
 
+  deleteProject(project) {
+    if (confirm("Are you sure you want to delete this project?")) {
+      let expanded = this.state.expanded;
+      delete expanded[project.key];
+      this.setState({expanded: expanded});
+      this.props.onDeleteProject(project);
+    }
+  }
+
+
   trs(project) {
     let rows = [];
     let row1 = <tr>
@@ -358,13 +368,19 @@ class ProjectsTable extends React.Component {
           <i className={'icon ' + (this.state.expanded[project.key] ? 'compress' : 'expand')}></i>
           {this.state.expanded[project.key] ? 'show less' : 'show more'}
         </button>
+        <button className="small ui labeled icon button"
+            onClick={this.deleteProject.bind(this, project)}>
+          <i className="trash icon"></i>
+          delete
+        </button>
       </td>
     </tr>;
     rows.push(row1);
     if (this.state.expanded[project.key]) {
       let row2 = <tr>
         <td colSpan="2">
-          <ProjectDetailsTable project={project}/>
+          <ProjectDetailsTable
+            project={project}/>
         </td>
       </tr>;
       rows.push(row2);
@@ -476,6 +492,40 @@ class Instructions extends React.Component {
     this.loadPastProjects();
   }
 
+  onDeleteProject(project) {
+    fetch('/api/csrf', {credentials: 'same-origin'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then((token) => {
+      let data = {csrfmiddlewaretoken: token.csrf_token};
+      return fetch('/api/projects/delete/' + project.key, {
+        method: 'post',
+        credentials: 'same-origin',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then((response) => {
+        return response.json()
+      })
+      .then((json) => {
+        if (this.state.project !== null && this.state.project.key === project.key) {
+          this.setState({project: null});
+        }
+        this.loadPastProjects();
+      })
+      .catch((ex) => {
+        console.error('delete failed', ex)
+      });
+    })
+    .catch((ex) => {
+      alert(ex);
+    });
+  }
+
   onExpansion(project, expanded) {
     if (expanded) {
       this.setState({project: project});
@@ -503,7 +553,7 @@ class Instructions extends React.Component {
       <div>
         { this.state.successMessage ? <SuccessMessage/> : null }
 
-        { this.state.projects.length ? <ProjectsTable projects={this.state.projects} onExpansion={this.onExpansion.bind(this)}/> : null}
+        { this.state.projects.length ? <ProjectsTable projects={this.state.projects} onExpansion={this.onExpansion.bind(this)} onDeleteProject={this.onDeleteProject.bind(this)}/> : null}
 
         { this.formOuter(this,this.state.project) }
 

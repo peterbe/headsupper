@@ -69,3 +69,10 @@ def add_project(request):
     p = model_to_dict(project)
     p['key'] = p.pop('id')
     return http.JsonResponse({'project': p})
+
+
+@login_required
+def delete_project(request, id):
+    project = Project.objects.get(id=id, creator=request.user)
+    project.delete()
+    return http.JsonResponse({'ok': True})
