@@ -13,7 +13,5 @@ env:
   - TOX_ENV=tests
 script:
   - tox -e $TOX_ENV
-  - npm install
-  - npm run deploy
 after_success:
   - coveralls
