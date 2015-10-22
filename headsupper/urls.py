@@ -7,8 +7,8 @@ import headsupper.api.urls
 
 urlpatterns = patterns(
     '',
-    url(r'^$', include(headsupper.base.urls)),
+    url(r'^$', include(headsupper.base.urls, namespace='base')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^api/', include(headsupper.api.urls)),
+    url(r'^api/', include(headsupper.api.urls, namespace='api')),
 )

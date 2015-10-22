@@ -21,6 +21,10 @@ class ProjectForm(forms.ModelForm):
             'on_tag_only',
         )
 
+    def __init__(self, *args, **kwargs):
+        super(ProjectForm, self).__init__(*args, **kwargs)
+        self.fields['trigger_word'].required = False
+
     def _clean_send_emails(self, key, required=False):
         value = self.cleaned_data[key]
         emails = extract_email_addresses(value)
@@ -29,7 +33,7 @@ class ProjectForm(forms.ModelForm):
                 validate_email(email)
             except forms.ValidationError:
                 raise forms.ValidationError(
-                    "'{}' for a valid email address".format(email)
+                    "'{}' not a valid email address".format(email)
                 )
         if required and not emails:
             raise forms.ValidationError(
