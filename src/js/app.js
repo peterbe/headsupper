@@ -90,8 +90,7 @@ class Form extends React.Component {
     })
     .then((json) => {
       if (json._errors) {
-        // oh no! validation errors!
-        console.log("VALIDATION ERRORS!", json._errors);
+        console.warn("VALIDATION ERRORS!", json._errors);
         this.setState({errors: json._errors});
       } else {
         let secret = this.refs.github_webhook_secret.value;
