@@ -10,3 +10,4 @@ MANIFEST
 /static/
 /node_modules/
 /venv/
+/htmlcov/

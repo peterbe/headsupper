@@ -3,7 +3,8 @@ import logging
 
 from django import http
 from django.template.context_processors import csrf
-from django.contrib.auth.decorators import login_required
+from django.utils.functional import wraps
+from django.views.decorators.http import require_POST
 from django.forms.models import model_to_dict
 
 from headsupper.base.models import Project
@@ -11,6 +12,23 @@ from . import forms
 
 
 logger = logging.getLogger('headsupper.api')
+
+
+def xhr_login_required(view_func):
+    """similar to django.contrib.auth.decorators.login_required
+    except instead of redirecting it returns a 403 message if not
+    authenticated."""
+    @wraps(view_func)
+    def inner(request, *args, **kwargs):
+        if not request.user.is_authenticated():
+            return http.HttpResponse(
+                json.dumps({'error': "You must be logged in"}),
+                content_type='application/json',
+                status=403
+            )
+        return view_func(request, *args, **kwargs)
+
+    return inner
 
 
 def signedin(request):
@@ -35,43 +53,41 @@ def csrfmiddlewaretoken(request):
     })
 
 
-@login_required
+def project_to_dict(project):
+    p = model_to_dict(project)
+    p['key'] = p.pop('id')
+    p.pop('creator')
+    return p
+
+
+@xhr_login_required
 def list_projects(request):
     projects = []
     qs = Project.objects.filter(creator=request.user)
     for project in qs.order_by('created'):
-        p = model_to_dict(project)
-        p['key'] = p.pop('id')
-        projects.append(p)
+        projects.append(project_to_dict(project))
     return http.JsonResponse({'projects': projects})
 
 
-@login_required
+@require_POST
+@xhr_login_required
 def add_project(request):
     data = json.loads(request.body)
     form = forms.ProjectForm(data)
     if not form.is_valid():
         return http.JsonResponse({'_errors': form.errors})
 
-    cd = form.cleaned_data
-    project = Project.objects.create(
-        creator=request.user,
-        github_full_name=cd['github_full_name'],
-        github_webhook_secret=cd['github_webhook_secret'],
-        trigger_word=cd['trigger_word'],
-        case_sensitive_trigger_word=cd['case_sensitive_trigger_word'],
-        send_to=cd['send_to'],
-        send_cc=cd['send_cc'],
-        send_bcc=cd['send_bcc'],
-        cc_commit_author=cd['cc_commit_author'],
-        on_tag_only=cd['on_tag_only'],
-    )
-    p = model_to_dict(project)
-    p['key'] = p.pop('id')
-    return http.JsonResponse({'project': p})
+    project = form.save(commit=False)
+    project.creator = request.user
+    default = Project._meta.get_field('trigger_word').default
+    project.trigger_word = project.trigger_word or default
+    project.save()
+
+    return http.JsonResponse({'project': project_to_dict(project)})
 
 
-@login_required
+@require_POST
+@xhr_login_required
 def delete_project(request, id):
     project = Project.objects.get(id=id, creator=request.user)
     project.delete()

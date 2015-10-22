@@ -29,6 +29,19 @@ Oh, and you might want to change the "Build Status" and "Coverage Status" links
 at the top of this file to point to your own travis and coveralls accounts.
 
 
+Test coverage
+-------------
+
+First `pip install coverage` then run:
+
+    coverage run ./manage.py test
+
+Then to see the report run:
+
+    coverage html
+    open htmlcov/index.html
+
+
 Build the production bundle
 ---------------------------
 
