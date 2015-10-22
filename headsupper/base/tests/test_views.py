@@ -53,7 +53,7 @@ class Tests(TestCase):
 
         cls.user = get_user_model().objects.create(username='peterbe')
 
-    url = reverse('home')
+    url = reverse('base:home')
 
     def _send(self, sample, secret=None):
         headers = {}
