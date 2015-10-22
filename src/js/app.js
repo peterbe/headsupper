@@ -2,6 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'whatwg-fetch';
 
+
+let lazyLoadCSS = (() => {
+  let loaded = [];
+  return (url) => {
+    if (loaded.indexOf(url) === -1) {
+      loaded.push(url);
+      requestAnimationFrame(() => {
+        let l = document.createElement('link');
+        l.rel = 'stylesheet';
+        l.href = url;
+        let h = document.getElementsByTagName('head')[0];
+        h.parentNode.insertBefore(l, h);
+      });
+    }
+  };
+})();
+
+const HANDWRITING_FONT_URL = '//fonts.googleapis.com/css?family=Handlee';
+
+
 class Form extends React.Component {
 
   constructor() {
@@ -329,6 +349,7 @@ class ProjectsTable extends React.Component {
   }
 
   toggleExpansion(project) {
+    lazyLoadCSS(HANDWRITING_FONT_URL);  // can be called repeatedly
     let expanded = this.state.expanded;
     expanded[project.key] = !expanded[project.key];
     this.setState({expanded: expanded});
