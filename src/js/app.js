@@ -30,20 +30,8 @@ class Form extends React.Component {
     this.state = {
         advanced: false,
         loading: false,
-        csrfmiddlewaretoken: null,
         errors: null,
     };
-
-    fetch('/api/csrf', {credentials: 'same-origin'})
-    .then(function(response) {
-      return response.json();
-    })
-    .then((token) => {
-      this.setState({csrfmiddlewaretoken: token.csrf_token});
-    })
-    .catch((ex) => {
-      alert(ex);
-    });
   }
 
   toggleAdvancedForm() {
@@ -64,11 +52,11 @@ class Form extends React.Component {
 
   submitForm(event) {
     event.preventDefault();
-    if (!this.state.csrfmiddlewaretoken) {
-      throw new Error("No CSRF token aquired");
+    if (!this.props.csrfmiddlewaretoken) {
+      throw new Error("No CSRF token acquired");
     }
     var data = {};
-    data.csrfmiddlewaretoken = this.state.csrfmiddlewaretoken;
+    data.csrfmiddlewaretoken = this.props.csrfmiddlewaretoken;
 
     let getValue = (ref) => {
       if (ref.type === 'checkbox') {
@@ -94,7 +82,6 @@ class Form extends React.Component {
       }
       data[key] = getValue(ref);
     });
-    // console.log('SUBMIT', data);
     this.setState({loading: true});
     this._postJSON('/api/projects/add', data)
     .then((response) => {
@@ -103,8 +90,7 @@ class Form extends React.Component {
     })
     .then((json) => {
       if (json._errors) {
-        // oh no! validation errors!
-        console.log("VALIDATION ERRORS!", json._errors);
+        console.warn("VALIDATION ERRORS!", json._errors);
         this.setState({errors: json._errors});
       } else {
         let secret = this.refs.github_webhook_secret.value;
@@ -488,17 +474,35 @@ class Instructions extends React.Component {
       successMessage: false,
       projects: [],
       project: null,
+      csrfmiddlewaretoken: null,
     };
-    this.loadPastProjects();
+    this.loadPastProjects()
+    .then(() => {
+      // get one of these in case we need to d a post
+      this.loadCsrfMiddlewareToken();
+    })
   }
 
   loadPastProjects() {
-    fetch('/api/projects', {credentials: 'same-origin'})
+    return fetch('/api/projects', {credentials: 'same-origin'})
     .then((response) => {
       return response.json();
     })
     .then((json) => {
       this.setState({projects: json.projects});
+    })
+    .catch((ex) => {
+      alert(ex);
+    });
+  }
+
+  loadCsrfMiddlewareToken() {
+    return fetch('/api/csrf', {credentials: 'same-origin'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then((token) => {
+      this.setState({csrfmiddlewaretoken: token.csrf_token});
     })
     .catch((ex) => {
       alert(ex);
@@ -564,7 +568,7 @@ class Instructions extends React.Component {
         <h2 className="ui dividing header">
           1. { this.state.projects.length ? 'Prepare another configuration' : 'Prepare your first configuration' }
         </h2>
-        <Form onSave={this.onSave.bind(this)}/>
+        <Form onSave={this.onSave.bind(this)} csrfmiddlewaretoken={this.state.csrfmiddlewaretoken}/>
       </div>
     )
   }
@@ -602,7 +606,6 @@ class Homepage extends React.Component {
     })
     .then((signedin) => {
       this.setState({signedin: signedin});
-
     })
     .catch((ex) => {
       alert(ex);
