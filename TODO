@@ -21,3 +21,5 @@ DONE
 * fix bug with toggling on the advanced fields
 
 * Ability to delete a config
+
+* Lazy load the handwriting font
