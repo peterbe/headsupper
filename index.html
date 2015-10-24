@@ -38,11 +38,14 @@
       margin: 5em 0em 0em;
       padding: 5em 0em;
     }
-    code {
+    code, pre {
       margin: 0px;
       padding: 0.2em 0.2em;
       background-color: rgba(0, 0, 0, 0.05);
       border-radius: 3px;
+    }
+    pre {
+      background-color: rgba(0, 0, 0, 0.05);
     }
     ol.list.instruction-steps li {
       padding: 0.6em 0px;
@@ -82,7 +85,9 @@
 </head>
 <body>
 
-<div class="ui container">
+  <div id="mount-point">
+  </div>
+<!--<div class="ui container">
 
   <h1 id="title">Headsupper</h1>
 
@@ -97,7 +102,8 @@
       <a class="item" href="https://github.com/peterbe/headsupper">On GitHub</a>
     </div>
   </div>
-</div>
+</div>-->
+
 <!-- <script src="//semantic-ui.com/dist/semantic.min.js"></script> -->
 <script src="bundle.js"></script>
 </body>
