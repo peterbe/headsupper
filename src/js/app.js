@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, IndexRoute, Route, Link } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 import 'whatwg-fetch';
 
 
@@ -636,4 +638,95 @@ class Homepage extends React.Component {
   }
 }
 
-ReactDOM.render(<Homepage/>, document.getElementById('mount-point'));
+class App extends React.Component {
+  // should I move the signedin stuff to here?!
+  render() {
+    return (
+      <div>
+        <div className="ui container" id="mount-point">
+
+          <h1 id="title">Headsupper</h1>
+
+          {this.props.children}
+
+        </div>
+        <div className="ui inverted vertical footer segment">
+          <div className="ui center aligned container">
+            <div className="ui horizontal inverted small divided link list">
+              <Link to="/" className="item">Home</Link>
+              <Link to="/about" className="item">About</Link>
+              <a className="item" href="http://www.peterbe.com">By @peterbe</a>
+              <a className="item" href="https://github.com/peterbe/headsupper">On GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class About extends React.Component {
+  render() {
+    let payloadUrl = document.location.protocol + '//' + document.location.hostname;
+    return (
+      <div className="ui text container">
+        <h2 className="ui dividing header">About Headsupper.io</h2>
+        <h5>tl;dr</h5>
+        <h3>1. You configure your Headsupper.io project</h3>
+        <h3>2. You make a <i>git commit</i> meantioning <code>headsup: …some message…</code></h3>
+        <h3>3. Push to <i>GitHub</i> and an email it sent with that message you committed</h3>
+        <hr style={{margin: '60px'}}/>
+
+        <h3 className="ui dividing header">The Basics</h3>
+        <p>
+        It works by you setting up a <b>GitHub Webhook</b> that sends a HTTPS POST to <code>{payloadUrl}</code> which then parses the commit message and looks for the <code>headsup</code> keyword. &nbsp;
+        <b>If</b> it's there an email goes out mentioning this.
+        </p>
+        <p>
+          <b>For example</b>, a git commit message can look like this:
+        </p>
+        <pre>upgrading to Django 1.9, fixes #123 headsup: remember to pip upgrade</pre>
+          <p>
+            Or on multiple lines like this:
+          </p>
+        <pre>TPS report, fixes #124
+<br/><br/>
+Headsup: To test the new report go to your cube and press the Inbox button</pre>
+
+        <h3 className="ui dividing header">Who To Send To</h3>
+        <p>You can send to a list of email addresses. Not just one email address.</p>
+        <p>Perhaps you have a team or a mailing list you can use to reach everyone
+          who might be interested.
+        </p>
+        <p>
+          You can also have it send to a certain email address(es) <b>and</b> additionally
+          you send a CC to another email address(es). You can set up an address(es)
+          to BCC to too.
+        </p>
+
+        <h3 className="ui dividing header">When To Send</h3>
+        <p>
+          Optionally you can set it up so that an email only goes out when you
+          make a new <b>git tag</b> and push that to <b>GitHub</b>. For example,
+          you might have an address(es) that only care when a new tagged releas
+          is made.
+        </p>
+
+        <h3 className="ui dividing header">What it Looks Like</h3>
+        <p>Thumbnail to come...</p>
+
+      </div>
+    )
+
+  }
+}
+
+
+ReactDOM.render((
+  <Router history={createBrowserHistory()}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Homepage} />
+      <Route path="about" component={About} />
+    </Route>
+  </Router>
+), document.getElementById('mount-point'))
