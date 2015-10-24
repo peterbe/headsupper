@@ -712,8 +712,25 @@ Headsup: To test the new report go to your cube and press the Inbox button</pre>
           is made.
         </p>
 
+        <p>For example, you can have one configuration that alerts the team on
+        all commits (that have a <code>headsup:</code> keyword) and you
+         have <i>another</i> configuration that goes to the project management team
+         on all tags pushed.
+      </p>
+
         <h3 className="ui dividing header">What it Looks Like</h3>
-        <p>Thumbnail to come...</p>
+
+        <a href="images/in-inbox.png"><img src="images/in-inbox-smaller.png" alt="Email"/></a>
+
+        <p>You don't have to make all your commits from GitHub Pull Requests, but this,
+          above, screenshot came from a Pull Request that looked like this:
+        </p>
+
+        <a href="images/pull-request.png"><img src="images/pull-request-smaller.png" alt="Pull Request"/></a>
+
+        <hr style={{margin: '60px'}}/>
+
+        <Link to="/" className="fluid ui button positive">Configure a project now</Link>
 
       </div>
     )
