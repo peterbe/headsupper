@@ -77,9 +77,9 @@ def home(request):
             status=403
         )
 
-    # it might be a tag!
     tag_name = tag_url = None
-    if body.get('ref', '').startswith('refs/tags'):
+    if body['ref'].startswith('refs/tags'):
+        # it might be a tag!
         __, tag_name = body['ref'].split('refs/tags/')
         # It's a tag!
         # tag = "BLA"
@@ -115,7 +115,13 @@ def home(request):
                 break
             else:
                 commits.append(commit['commit'])
-    else:
+    elif body['ref'].startswith('refs/heads/'):
+        commit_branch = body['ref'].split('refs/heads/')[1]
+        if commit_branch != project.on_branch:
+            ping.http_error = 200
+            ping.save()
+            return http.HttpResponse("Not the right branch\n")
+
         try:
             commits = body['commits']
         except KeyError:
@@ -162,7 +168,6 @@ def find_commits_messages(project, commits):
 
     messages = []
     for commit in commits:
-
         message = commit['message']
         if regex.findall(message):
             headsup_message = regex.findall(message)[0][1].strip()

@@ -93,6 +93,7 @@ class Tests(TestCase):
                 'send_cc': None,
                 'send_bcc': None,
                 'trigger_word': 'Headsup',
+                'on_branch': 'master',
             }]}
         )
 

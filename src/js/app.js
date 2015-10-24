@@ -76,6 +76,7 @@ class Form extends React.Component {
       'send_bcc',
       'cc_commit_author',
       'on_tag_only',
+      'on_branch',
     ];
     refs.forEach((key) => {
       let ref = this.refs[key];
@@ -111,7 +112,8 @@ class Form extends React.Component {
       }
     })
     .catch((ex) => {
-      console.log('parsing failed', ex)
+      alert("A server error happened. Sorry. Please try again.");
+      console.error('parsing failed', ex);
     });
   }
 
@@ -180,11 +182,28 @@ class Form extends React.Component {
             placeholder="pick a secret word or short sentence"
             type="text"/>
       </div>
+      <div className={getFieldClassName('send_to')}>
+        <label>Send To</label>
+        <textarea
+            rows="2"
+            ref="send_to"
+            tabIndex="3"
+            placeholder="email addresses separated by ; or newline"
+            ></textarea>
+      </div>
+      <div className={getFieldClassName('on_branch')}>
+        <label>On Branch <small>(only trigger when pushed to this branch; leave empty )</small></label>
+        <input
+            ref="on_branch"
+            tabIndex="4"
+            defaultValue="master"
+            type="text"/>
+      </div>
       <div className={getFieldClassName('trigger_word')}>
         <label>Trigger Word</label>
         <input
             ref="trigger_word"
-            tabIndex="20"
+            tabIndex="5"
             defaultValue="Headsup"
             type="text"/>
       </div>
@@ -192,20 +211,11 @@ class Form extends React.Component {
         <div className="ui checkbox toggle">
           <input
               ref="case_sensitive_trigger_word"
-              tabIndex="30"
+              tabIndex="6"
               type="checkbox"
               />
             <label>Case-<b>sensitive</b> trigger</label>
         </div>
-      </div>
-      <div className={getFieldClassName('send_to')}>
-        <label>Send To</label>
-        <textarea
-            rows="2"
-            ref="send_to"
-            tabIndex="40"
-            placeholder="email addresses separated by ; or newline"
-            ></textarea>
       </div>
       <div className={getFieldClassName('send_cc')}>
         <label>Send CC</label>
@@ -213,7 +223,7 @@ class Form extends React.Component {
             rows="2"
             ref="send_cc"
             placeholder="email addresses separated by ; or newline"
-            tabIndex="50"
+            tabIndex="7"
             ></textarea>
       </div>
       <div className={getFieldClassName('send_bcc')}>
@@ -222,7 +232,7 @@ class Form extends React.Component {
             rows="2"
             ref="send_bcc"
             placeholder="email addresses separated by ; or newline"
-            tabIndex="60"
+            tabIndex="8"
             ></textarea>
       </div>
       <div className={getFieldClassName('cc_commit_author')}>
@@ -230,7 +240,7 @@ class Form extends React.Component {
           <input
               ref="cc_commit_author"
               type="checkbox"
-              tabIndex="70"/>
+              tabIndex="9"/>
             <label>CC the commit author always</label>
         </div>
       </div>
@@ -238,7 +248,7 @@ class Form extends React.Component {
         <div className="ui checkbox toggle">
           <input
               ref="on_tag_only"
-              tabIndex="80"
+              tabIndex="10"
               type="checkbox"/>
             <label>Only send when a new tag is created</label>
         </div>
@@ -260,11 +270,11 @@ class ValidationErrors extends React.Component {
       <ol className="ui list">
       {
         keys.map((key) => {
-          return <li>
+          return <li key={key}>
             <code>{key}</code>
             {
               this.props.errors[key].map((msg) => {
-                return <span> {msg}</span>
+                return <span key={key+msg}> {msg}</span>
               })
             }
           </li>
@@ -290,8 +300,12 @@ class ProjectDetailsTable extends React.Component {
     return <table className="ui compact table">
       <tbody>
         <tr>
+          <th>On Branch</th>
+          <td><code>{project.on_branch}</code></td>
+        </tr>
+        <tr>
           <th>Trigger Word</th>
-          <td>{project.trigger_word}</td>
+          <td><code>{project.trigger_word}</code></td>
         </tr>
         <tr>
           <th>Case-<b>sensitive</b> trigger</th>
@@ -512,6 +526,7 @@ class Instructions extends React.Component {
   }
 
   onSave(project) {
+    lazyLoadCSS(HANDWRITING_FONT_URL);  // can be called repeatedly
     this.setState({successMessage: true, project: project});
     setTimeout(() => {
       this.setState({successMessage: false});

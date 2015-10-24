@@ -11,8 +11,6 @@ TODO
   email from `Headsupper.io <oi@headsupper.io>` that might need to be
   manually approved from your spam folder.
 
-* Only send on pushes to master
-
 
 DONE
 ----
@@ -24,3 +22,5 @@ DONE
 * Lazy load the handwriting font
 
 * /about page
+
+* Only send on pushes to master

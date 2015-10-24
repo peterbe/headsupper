@@ -19,6 +19,7 @@ class ProjectForm(forms.ModelForm):
             'send_bcc',
             'cc_commit_author',
             'on_tag_only',
+            'on_branch',
         )
 
     def __init__(self, *args, **kwargs):

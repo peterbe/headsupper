@@ -5,17 +5,20 @@ Debugging tool to re-send a saved JSON dump
 """
 
 import os
+import hashlib
+import hmac
+
 import requests
 
 
-def run(filepath):
+def run(filepath, secret):
     payload = open(filepath).read()
-    filename = os.path.basename(filepath)
-    sans = os.path.splitext(filename)[0]
 
-    __, signature = sans.split('__')
-    if not signature.startswith('sha1='):
-        signature = 'sha1=' + signature
+    signature = 'sha1=' + hmac.new(
+        secret.encode('utf-8'),
+        payload,
+        hashlib.sha1
+    ).hexdigest()
 
     url = 'http://localhost:8000/'
     response = requests.post(
@@ -30,8 +33,8 @@ def run(filepath):
 if __name__ == '__main__':
     import sys
     args = sys.argv[1:]
-    if not args or (args and not os.path.isfile(args[0])):
-        print "python %s /path/to/saved/1234.0__signature.json" % __file__
+    if len(args) != 2 or (len(args) == 2 and not os.path.isfile(args[0])):
+        print "python %s /path/to/saved/1234.0.json secret" % __file__
         sys.exit(1)
 
-    sys.exit(run(args[0]))
+    sys.exit(run(args[0], args[1]))
