@@ -1,8 +1,6 @@
 TODO
 ----
 
-* /about page
-
 * run `npm run deploy` in travis and see that it worked
 
 * ability to see past payloads
@@ -24,3 +22,5 @@ DONE
 * Ability to delete a config
 
 * Lazy load the handwriting font
+
+* /about page
