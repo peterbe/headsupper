@@ -17,7 +17,6 @@ class ProjectForm(forms.ModelForm):
             'send_to',
             'send_cc',
             'send_bcc',
-            'cc_commit_author',
             'on_tag_only',
             'on_branch',
         )

@@ -74,7 +74,6 @@ class Form extends React.Component {
       'send_to',
       'send_cc',
       'send_bcc',
-      'cc_commit_author',
       'on_tag_only',
       'on_branch',
     ];
@@ -235,29 +234,20 @@ class Form extends React.Component {
             tabIndex="8"
             ></textarea>
       </div>
-      <div className={getFieldClassName('cc_commit_author')}>
-        <div className="ui checkbox toggle">
-          <input
-              ref="cc_commit_author"
-              type="checkbox"
-              tabIndex="9"/>
-            <label>CC the commit author always</label>
-        </div>
-      </div>
       <div className={getFieldClassName('on_tag_only')}>
         <div className="ui checkbox toggle">
           <input
               ref="on_tag_only"
-              tabIndex="10"
+              tabIndex="9"
               type="checkbox"/>
             <label>Only send when a new tag is created</label>
         </div>
       </div>
       { this.state.errors ? <ValidationErrors errors={this.state.errors} /> : null }
       <button
-          tabIndex="90"
+          tabIndex="10"
           className="ui primary button"
-          type="submit">Save</button>
+          type="submit">Save Configuration</button>
     </form>
   }
 }
@@ -321,13 +311,6 @@ class ProjectDetailsTable extends React.Component {
         <tr>
           <th>Send BCC</th>
           <td>{project.send_bcc}</td>
-        </tr>
-        <tr>
-          <th>CC the commit author always</th>
-          <td>
-            <i className={'large icon ' + (project.cc_commit_author ? 'green checkmark' : 'red minus')}>
-            </i>
-          </td>
         </tr>
         <tr>
           <th>Only send when a new tag is created</th>
