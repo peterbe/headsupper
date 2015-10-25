@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 
     # Third party
     'django_jinja',
-    'pipeline',
 
     # Django apps
     'django.contrib.admin',
@@ -51,7 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'django.contrib.sites',
 
     # allauth
@@ -96,7 +94,7 @@ LANGUAGE_CODE = config('LANGUAGE_CODE', default='en-us')
 
 TIME_ZONE = config('TIME_ZONE', default='UTC')
 
-USE_I18N = config('USE_I18N', default=True, cast=bool)
+USE_I18N = config('USE_I18N', default=False, cast=bool)
 
 USE_L10N = config('USE_L10N', default=True, cast=bool)
 
@@ -106,15 +104,13 @@ STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'static'))
 STATIC_URL = config('STATIC_URL', '/static/')
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'pipeline.finders.CachedFileFinder',
-    'pipeline.finders.PipelineFinder',
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'pipeline.finders.CachedFileFinder',
+#     'pipeline.finders.PipelineFinder',
+# )
 
 # MEDIA_ROOT = config('MEDIA_ROOT', default=os.path.join(BASE_DIR, 'media'))
 # MEDIA_URL = config('MEDIA_URL', '/media/')
