@@ -20,29 +20,29 @@ MarkupSafe==0.23
 
 # sha256: 0yV2uq13_dnmhZvpfCtqPBem9IQ2Q4nbcx8Gl7ehlmE
 django-csp==2.0.3
-
-# sha256: mWbSw_hrIzdNqYkFhPFrA_bkYFWCTjChCHFpdNRdHkU
-# sha256: 98W-TbhvGnbMxMgH-QCFNidavsPigV0YJl1pSu7zyzw
-# sha256: bOkY5I2u1knhOqTrLOmdgCEkEUAb5CKIyURzqBEJJE4
-# sha256: ZEHnmPiGN0TJBXTeJTvtMoxHf9LIbK9SuNnYXx7Ln5Y
-# sha256: TWTtG54OcwlfXPqH8Ol920yEAEno7-t-Y7RhGLodYjo
-# sha256: Oe8FQeSJsc9VFc7fGx-Z3lhf1mBGPNzeQ6A9fZIEJ4I
-# sha256: aFsZlAJlchd0WK8UPMJKIIL0APGOY_3I4u1o3ZO7D0k
-# sha256: hEYBPfvemz9Pm_6glBjd1SZ2CoeYxBut0_cHqYrQdFs
-# sha256: 1f9wYInpFQdg0ji2YgOiTUoKYXUWBBAZGZX_BNGJP6o
-# sha256: p4tITVRy3Yxoj4s-7hhkaiXGbORbLCZlKFD2r5zlKxc
-# sha256: xO5wy0B_koRResNo8SHPB5anE0uWHlPZ2vGqro9E-5A
-# sha256: APNfsOfi_DSM0JHSXTbGdotyFGPRI5bWipSRqKX5Hs8
-pytz==2015.4
+# sha256: SZo1E9IQ5S4P6nG22blkk_uFJ8bhEXyOptZ55S_lRo0
+# sha256: dSvaZrHQ7mA7P4T9u-MEKMAc9d3bvlNfaPFUYR6kfiU
+# sha256: 3EVC3q3CQiTYXJS4O6dCZ-08DHAFxnRlBz609Tl3t-E
+# sha256: 4EJpKJu1YIpR4IVAVEPWZNXAAGrxPkiHEmd41AMPVYw
+# sha256: tLRPhgYHRInHh7FhT-OU1VF4rNSgOHURze0pH5umZ6s
+# sha256: Z0feMRC3gqy4hVLWkLEM8PkaKvKmhKoBgchlre2er7g
+# sha256: HaSPYz4vsnVdGnvze1O9rgNtLEoqPnB5dr4VsTKpdss
+# sha256: GcQv3xfVsemlri2bZLsVpWEpXwUd9WXjodjzcPLlrWc
+# sha256: PKYjIXxdbKwE9dOhWxBj9_0CBCCh1tqDk2ezlQL1ggQ
+# sha256: 0rB1P_Vca9-NMttl8coG22YKmBtxMikuDi0c_5gxXJU
+# sha256: Ae7RsiJtw4bY5Gei_4xPGqCMZdXX58Q6oJS9RdW9aLo
+# sha256: xZimtoUNvMAIQ2UYeOgoLax3yV4Z2EhHtpGO6z7Y8MI
+# sha256: KzsgkZr88G-QpOWKoqLIKmAbcd1aNSrzZHjlM31KFs0
+pytz==2015.6
 
 # sha256: b0wujFraFwOf8cHji8Ub6pMXrzZ24oRmFIyN9fx48TI
 django-jinja==1.4.1
 
 # sha256: UCb-DKlgBwm2iucOCGocoADArwLoisjLEIAwxrW-jG0
 html2text==2015.6.21
-# sha256: IPl2zc4CpCtpzoDp4DiXpRgUs21EizcohUYIbrxHMUY
-# sha256: OYo9ttYYmdJf1KBsbKEgUbDOFx1wXezX7VURUXtLuT0
-requests==2.7.0
+# sha256: ifGx8l3Ne2j1FOjTQaWy60ZvlgrnVoIuqrSAo8GoHCg
+# sha256: hP6NW_Tc3MSQAkRsR6FG0XrBD6zwDZCGZZBkrEO2wls
+requests==2.8.1
 # sha256: fn9zpnXFGHErrdeDJ54m0WQUDz_C7XoyECw9CKaipKc
 jsonfield==1.0.3
 # sha256: 67kjSmrxku6ahiO8lapstSNVdj0E_u2xmoiM2kC7NGY
