@@ -386,12 +386,12 @@ class ProjectsTable extends React.Component {
       </td>
       <td>
         <button
-          className="small ui labeled icon button"
+          className="tiny ui labeled icon button"
           onClick={this.toggleExpansion.bind(this, project)}>
           <i className={'icon ' + (this.state.expanded[project.id] ? 'compress' : 'expand')}></i>
           {this.state.expanded[project.id] ? 'show less' : 'show more'}
         </button>
-        <button className="small ui labeled icon button"
+        <button className="tiny ui labeled icon button"
             onClick={this.deleteProject.bind(this, project)}>
           <i className="trash icon"></i>
           delete
@@ -442,7 +442,7 @@ class ProjectInstructions extends React.Component {
     let project = this.props.project;
     let url = 'https://github.com/' + project.github_full_name + '/settings/hooks/new';
     return (
-      <div className="ui grid">
+      <div className="ui grid stackable grid">
         <div className="eight wide column">
           <ol className="ui list instruction-steps">
             <li>
@@ -673,17 +673,17 @@ class App extends React.Component {
   // should I move the signedin stuff to here?!
   render() {
     return (
-      <div>
-        <div className="ui container" id="mount-point">
+      <div className="ui container">
+        <div >
 
           <h1 id="title">Headsupper</h1>
 
           {this.props.children}
 
         </div>
-        <div className="ui inverted vertical footer segment">
+        <div className="ui vertical footer segment">
           <div className="ui center aligned container">
-            <div className="ui horizontal inverted small divided link list">
+            <div className="ui horizontal small divided link list">
               <Link to="/" className="item">Home</Link>
               <Link to="/about" className="item">About</Link>
               <a className="item" href="http://www.peterbe.com">By @peterbe</a>

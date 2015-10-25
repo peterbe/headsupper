@@ -8,20 +8,27 @@
 
   <title>Headsupper.io</title>
   <link rel="icon" type="image/png" href="/static/images/favicon32.png">
-  <!-- <link
+  <link
   href="//fonts.googleapis.com/css?family=Lato:400,700,400italic&amp;subset=latin"
   rel="stylesheet"
-  type="text/css"> -->
+  type="text/css">
 
   <link rel="stylesheet" href="css/semantic.min.css">
   <style type="text/css">
-    body > .ui.container {
-      margin-top: 3em;
+    body {
+      background-image: url('images/headsupper.png');
+      background-repeat: no-repeat;
+      background-position: top right;
+      color: rgba(0, 0, 0, 0.77);
+    }
+    #mount-point {
+      margin-top: 2em;
     }
     .ui.container h1 {
-      font-size: 3em;
+      font-size: 4em;
       text-align: center;
-      font-weight: normal;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #efefef;
     }
     .ui.container h2.dividing.header {
       font-size: 2em;
@@ -85,24 +92,7 @@
 
   <div id="mount-point">
   </div>
-<!--<div class="ui container">
 
-  <h1 id="title">Headsupper</h1>
-
-  <div id="mount-point">
-  </div>
-
-</div>
-<div class="ui inverted vertical footer segment">
-  <div class="ui center aligned container">
-    <div class="ui horizontal inverted small divided link list">
-      <a class="item" href="http://www.peterbe.com">By Peter Bengtsson</a>
-      <a class="item" href="https://github.com/peterbe/headsupper">On GitHub</a>
-    </div>
-  </div>
-</div>-->
-
-<!-- <script src="//semantic-ui.com/dist/semantic.min.js"></script> -->
 <script src="bundle.js"></script>
 </body>
 </html>
