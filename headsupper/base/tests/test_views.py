@@ -147,6 +147,23 @@ class Tests(TestCase):
         self.assertEqual(project, ping.project)
         self.assertEqual(ping.http_error, 201)
 
+    def test_lots_of_sending(self):
+        project = Project.objects.create(
+            github_full_name='peterbe/headsupper',
+            github_webhook_secret='secret',
+            send_to='one@example.com',
+            creator=self.user,
+            send_cc='two@example.com',
+            send_bcc='three@example.com',
+        )
+        assert project.on_branch == 'master'
+        response = self._send('first-line', 'secret')
+        self.assertEqual(response.status_code, 201)
+        email = mail.outbox[-1]
+        self.assertEqual(email.to, ['one@example.com'])
+        self.assertEqual(email.cc, ['two@example.com'])
+        self.assertEqual(email.bcc, ['three@example.com'])
+
     def test_testhook(self):
         project = Project.objects.create(
             github_full_name='peterbe/headsupper',
@@ -176,6 +193,24 @@ class Tests(TestCase):
         response = self._send('first-line', 'secret')
         self.assertEqual(response.status_code, 200)
         self.assertTrue('Not the right branch' in response.content)
+        assert len(mail.outbox) == 0
+
+        ping, = Payload.objects.all()
+        self.assertEqual(project, ping.project)
+        self.assertEqual(ping.http_error, 200)
+        self.assertFalse(ping.messages)
+
+    def test_no_matching_trigger_word(self):
+        project = Project.objects.create(
+            github_full_name='peterbe/headsupper',
+            github_webhook_secret='secret',
+            trigger_word='somethingelse',
+            send_to='peterbe@example.com',
+            creator=self.user,
+        )
+        response = self._send('first-line', 'secret')
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'No trigger messages')
         assert len(mail.outbox) == 0
 
         ping, = Payload.objects.all()
