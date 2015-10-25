@@ -699,9 +699,19 @@ class Homepage extends React.Component {
       )
     } else {
       return (
-        <div>
-        <p>You have to sign in</p>
-        <p><a href="/accounts/github/login/">Sign in with GitHub</a></p>
+        <div className="ui center aligned header">
+          <h2 className="ui header">You have to sign in</h2>
+          <p>
+            <a href="/accounts/github/login/" className="ui github button huge">
+              <i className="github icon"></i>
+              Sign in with GitHub
+            </a>
+          </p>
+
+          <h2 className="ui header">Not sure what this is?</h2>
+            <p>
+              <Link to="/about" className="ui button">Read the About page</Link>
+            </p>
         </div>
       )
     }
