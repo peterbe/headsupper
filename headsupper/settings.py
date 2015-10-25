@@ -119,7 +119,7 @@ SESSION_COOKIE_SECURE = config(
     'SESSION_COOKIE_SECURE', default=not DEBUG, cast=bool)
 
 
-from django_jinja.builtins import DEFAULT_EXTENSIONS
+# from django_jinja.builtins import DEFAULT_EXTENSIONS
 
 TEMPLATES = [
     {
@@ -133,9 +133,9 @@ TEMPLATES = [
                 'headsupper.base.context_processors.i18n',
                 # 'django.template.context_processors.request', ##???
             ],
-            'extensions': DEFAULT_EXTENSIONS + [
-                'pipeline.templatetags.ext.PipelineExtension',
-            ],
+            # 'extensions': DEFAULT_EXTENSIONS + [
+            #    'pipeline.templatetags.ext.PipelineExtension',
+            # ],
         }
     },
     {
