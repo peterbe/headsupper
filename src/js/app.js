@@ -482,6 +482,19 @@ class ProjectInstructions extends React.Component {
 }
 
 
+class SpamboxPrevention extends React.Component {
+  render() {
+    return (
+      <div className="ui raised segment">
+        <p><b>Note!</b> When you've set this up, expect to receive emails
+        sent from <code>io@headsupper.io</code>.<br/>
+        Watch out so it doesn't accidentally go to your <b>Spam folder</b>!</p>
+      </div>
+    )
+  }
+}
+
+
 
 class Instructions extends React.Component {
   constructor() {
@@ -604,6 +617,8 @@ class Instructions extends React.Component {
         </h2>
 
         {this.state.project ? <ProjectInstructions project={this.state.project}/> : <i>Awaiting configuration</i>}
+
+        {this.state.project ? <SpamboxPrevention project={this.state.project}/> : null}
 
       </div>
     )
