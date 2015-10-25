@@ -11,3 +11,4 @@ MANIFEST
 /node_modules/
 /venv/
 /htmlcov/
+/dist/
