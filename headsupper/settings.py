@@ -116,9 +116,8 @@ TEMPLATES = [
             'match_extension': '.jinja',
             'newstyle_gettext': True,
             'context_processors': [
-                'headsupper.base.context_processors.settings',
-                'headsupper.base.context_processors.i18n',
-                # 'django.template.context_processors.request', ##???
+                # 'headsupper.base.context_processors.settings',
+                # 'django.template.context_processors.request',
             ],
         }
     },

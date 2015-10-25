@@ -1,4 +1,7 @@
+import os
 import json
+
+import mock
 
 from django.core.urlresolvers import reverse
 from django.test import TestCase
@@ -6,6 +9,12 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 
 from headsupper.base.models import Project
+from headsupper.base.tests.test_views import Response
+
+
+sample_dir = os.path.dirname(__file__)
+
+SAMPLE_REPO = json.load(open(os.path.join(sample_dir, 'sample-repo.json')))
 
 
 class Tests(TestCase):
@@ -16,6 +25,7 @@ class Tests(TestCase):
         settings.AUTHENTICATION_BACKENDS += (
             'django.contrib.auth.backends.ModelBackend',
         )
+        settings.GITHUB_API_ROOT = 'https://api.gitthubb.xxx'
 
     def _login(self):
         user, __ = get_user_model().objects.get_or_create(
@@ -96,7 +106,18 @@ class Tests(TestCase):
             }]}
         )
 
-    def test_add_project(self):
+    @mock.patch('requests.get')
+    def test_add_project(self, rget):
+
+        def mocked_get(url):
+            if url.endswith('/repos/xxx/yyy'):
+                return Response('not found', status_code=404)
+            if url.endswith('/repos/peterbe/headsupper'):
+                return Response(SAMPLE_REPO)
+            raise NotImplementedError(url)
+
+        rget.side_effect = mocked_get
+
         url = reverse('api:add')
         data = {}
         response = self.client.post(url, data)
@@ -119,7 +140,7 @@ class Tests(TestCase):
         response = self.post_json(url, data)
         self.assertEqual(response.status_code, 200)
         self.assertTrue(json.loads(response.content)['_errors'])
-        data['github_full_name'] = 'peterbe/headsupper'
+        data['github_full_name'] = 'xxx/yyy'
         data['github_webhook_secret'] = 'secret'
         data['send_to'] = 'xxx'
         response = self.post_json(url, data)
@@ -127,10 +148,14 @@ class Tests(TestCase):
         self.assertEqual(
             json.loads(response.content),
             {'_errors': {
-                'send_to': ["'xxx' not a valid email address"]
+                'send_to': ["'xxx' not a valid email address"],
+                'github_full_name': [
+                    'Not found as a publically available GitHub project'
+                ],
             }}
         )
         data['send_to'] = 'me@example.com'
+        data['github_full_name'] = 'peterbe/headsupper'
         response = self.post_json(url, data)
         self.assertEqual(response.status_code, 200)
         self.assertTrue(json.loads(response.content)['project'])
@@ -165,3 +190,35 @@ class Tests(TestCase):
             {'ok': True}
         )
         self.assertEqual(Project.objects.all().count(), 0)
+
+    @mock.patch('requests.get')
+    def test_preview_github_project(self, rget):
+
+        def mocked_get(url):
+            if url.endswith('/repos/xxx/yyy'):
+                return Response('not found', status_code=404)
+            if url.endswith('/repos/peterbe/headsupper'):
+                return Response(SAMPLE_REPO)
+            raise NotImplementedError(url)
+
+        rget.side_effect = mocked_get
+
+        self._login()
+        url = reverse('api:preview_github_full_name')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 400)
+
+        response = self.client.get(url, {'full_name': 'xxx/yyy'})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(
+            json.loads(response.content),
+            {'project': None}
+        )
+
+        response = self.client.get(url, {'full_name': 'peterbe/headsupper'})
+        self.assertEqual(response.status_code, 200)
+        self.assertNotEqual(
+            json.loads(response.content),
+            {'project': None}
+        )
+        self.assertTrue(json.loads(response.content)['project'])

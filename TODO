@@ -1,8 +1,6 @@
 TODO
 ----
 
-* Only allowed open and found github projects
-
 * run `npm run deploy` in travis and see that it worked
 
 * ability to see past payloads
@@ -27,3 +25,5 @@ DONE
   manually approved from your spam folder.
 
 * Clean away all django-pipeline
+
+* Only allowed open and found github projects
