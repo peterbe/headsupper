@@ -353,15 +353,15 @@ class ProjectsTable extends React.Component {
   toggleExpansion(project) {
     lazyLoadCSS(HANDWRITING_FONT_URL);  // can be called repeatedly
     let expanded = this.state.expanded;
-    expanded[project.key] = !expanded[project.key];
+    expanded[project.id] = !expanded[project.id];
     this.setState({expanded: expanded});
-    this.props.onExpansion(project, expanded[project.key]);
+    this.props.onExpansion(project, expanded[project.id]);
   }
 
   deleteProject(project) {
     if (confirm("Are you sure you want to delete this project?")) {
       let expanded = this.state.expanded;
-      delete expanded[project.key];
+      delete expanded[project.id];
       this.setState({expanded: expanded});
       this.props.onDeleteProject(project);
     }
@@ -388,8 +388,8 @@ class ProjectsTable extends React.Component {
         <button
           className="small ui labeled icon button"
           onClick={this.toggleExpansion.bind(this, project)}>
-          <i className={'icon ' + (this.state.expanded[project.key] ? 'compress' : 'expand')}></i>
-          {this.state.expanded[project.key] ? 'show less' : 'show more'}
+          <i className={'icon ' + (this.state.expanded[project.id] ? 'compress' : 'expand')}></i>
+          {this.state.expanded[project.id] ? 'show less' : 'show more'}
         </button>
         <button className="small ui labeled icon button"
             onClick={this.deleteProject.bind(this, project)}>
@@ -399,7 +399,7 @@ class ProjectsTable extends React.Component {
       </td>
     </tr>;
     rows.push(row1);
-    if (this.state.expanded[project.key]) {
+    if (this.state.expanded[project.id]) {
       let row2 = <tr>
         <td colSpan="2">
           <ProjectDetailsTable
@@ -541,7 +541,7 @@ class Instructions extends React.Component {
     })
     .then((token) => {
       let data = {csrfmiddlewaretoken: token.csrf_token};
-      return fetch('/api/projects/delete/' + project.key, {
+      return fetch('/api/projects/delete/' + project.id, {
         method: 'post',
         credentials: 'same-origin',
         headers: {
@@ -554,7 +554,7 @@ class Instructions extends React.Component {
         return response.json()
       })
       .then((json) => {
-        if (this.state.project !== null && this.state.project.key === project.key) {
+        if (this.state.project !== null && this.state.project.id === project.id) {
           this.setState({project: null});
         }
         this.loadPastProjects();
@@ -625,7 +625,8 @@ class Homepage extends React.Component {
       this.setState({signedin: signedin});
     })
     .catch((ex) => {
-      alert(ex);
+      alert('Internal Server error on the backend. Sorry. Please try again.');
+      console.error(ex);
     });
   }
 
