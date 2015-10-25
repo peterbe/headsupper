@@ -42,6 +42,12 @@ Then to see the report run:
     open htmlcov/index.html
 
 
+Or, just run:
+
+    ./run_coverage.sh
+    open htmlcov/index.html
+
+
 Build the production bundle
 ---------------------------
 

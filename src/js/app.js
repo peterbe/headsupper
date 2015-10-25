@@ -21,6 +21,32 @@ let lazyLoadCSS = (() => {
   };
 })();
 
+
+let projectFinder = (() => {
+  let loaded = {};
+  return (name) => {
+    if (loaded[name] !== undefined) {
+      let promise = new Promise((resolve) => {
+        resolve(loaded[name])
+      });
+      return promise;
+    } else {
+      let url = '/api/preview-github-project?full_name=' + encodeURIComponent(name);
+      return fetch(url, {credentials: 'same-origin'})
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        loaded[name] = json.project;
+        return json.project;
+      })
+      .catch((ex) => {
+        console.error('Unable to fetch project', ex);
+      });
+    }
+  }
+})();
+
 const HANDWRITING_FONT_URL = '//fonts.googleapis.com/css?family=Handlee&subset=latin';
 
 
@@ -33,6 +59,7 @@ class Form extends React.Component {
         advanced: false,
         loading: false,
         errors: null,
+        previewProject: null,
     };
   }
 
@@ -107,6 +134,9 @@ class Form extends React.Component {
         if (this.state.errors !== null) {
           this.setState({errors: null});
         }
+        if (this.state.previewProject) {
+          this.setState({previewProject: null});
+        }
         this.props.onSave(json.project);
       }
     })
@@ -117,12 +147,16 @@ class Form extends React.Component {
   }
 
   previewGitHubProject(event) {
-    let currentTarget = event.currentTarget;
-    setTimeout(() => {
-      if (!currentTarget.contains(document.activeElement)) {
-          console.log('component officially blurred', currentTarget.value);
-      }
-    }, 0);
+    if (event.target.value) {
+      projectFinder(event.target.value)
+      .then((project) => {
+        if (project !== undefined) {  // it'll be undefined on exceptions
+          // this `project` might be null, and we distinguish that
+          // from null by making it a {} which is truish.
+          this.setState({previewProject: project || {}});
+        }
+      });
+    }
   }
 
   render() {
@@ -166,6 +200,7 @@ class Form extends React.Component {
 
       <div className={getFieldClassName('github_full_name')}>
         <label>GitHub Full Name</label>
+        { this.state.previewProject ? <PreviewProject project={this.state.previewProject}/> : null }
         <input
             ref="github_full_name"
             tabIndex="1"
@@ -252,6 +287,27 @@ class Form extends React.Component {
   }
 }
 
+
+class PreviewProject extends React.Component {
+  render() {
+    if (this.props.project.name) {
+      // found it!
+      return (
+        <div className="ui pointing below label">
+          <b>Found it!</b> <a href={this.props.project.html_url}>{this.props.project.description || this.props.project.description}</a>
+        </div>
+      )
+    } else {
+      return (
+        <div className="ui pointing below red basic label">
+          <b>Could not be found :(</b> Sorry, if it does exist but is private. Only public projects possible.
+        </div>
+      )
+    }
+  }
+}
+
+
 class ValidationErrors extends React.Component {
   render() {
     let keys = Object.keys(this.props.errors);
@@ -279,7 +335,7 @@ class ValidationErrors extends React.Component {
 class SuccessMessage extends React.Component {
   render() {
     return <div className="ui green huge message">
-      Yay! Your project has successfully been saved.
+      Yay! Your project has been saved successfully.
     </div>
   }
 }

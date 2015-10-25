@@ -9,6 +9,7 @@ from django.forms.models import model_to_dict
 
 from headsupper.base.models import Project
 from . import forms
+from . import utils
 
 
 logger = logging.getLogger('headsupper.api')
@@ -91,3 +92,13 @@ def delete_project(request, id):
     project = Project.objects.get(id=id, creator=request.user)
     project.delete()
     return http.JsonResponse({'ok': True})
+
+
+@xhr_login_required
+def preview_github_full_name(request):
+    full_name = request.GET.get('full_name', '').strip()
+    if not full_name:
+        return http.HttpResponseBadRequest('full_name')
+    return http.JsonResponse({
+        'project': utils.find_github_project(full_name)
+    })

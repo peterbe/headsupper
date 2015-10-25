@@ -3,6 +3,7 @@ from django.core.validators import validate_email
 
 from headsupper.base.models import Project
 from headsupper.base.views import extract_email_addresses
+from headsupper.api import utils
 
 
 class ProjectForm(forms.ModelForm):
@@ -49,3 +50,11 @@ class ProjectForm(forms.ModelForm):
 
     def clean_send_bcc(self):
         return self._clean_send_emails('send_bcc', False)
+
+    def clean_github_full_name(self):
+        value = self.cleaned_data['github_full_name'].strip()
+        if not utils.find_github_project(value):
+            raise forms.ValidationError(
+                'Not found as a publically available GitHub project'
+            )
+        return value
