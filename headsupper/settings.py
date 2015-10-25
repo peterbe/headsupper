@@ -102,24 +102,11 @@ USE_TZ = config('USE_TZ', default=True, cast=bool)
 
 STATIC_ROOT = config('STATIC_ROOT', default=os.path.join(BASE_DIR, 'static'))
 STATIC_URL = config('STATIC_URL', '/static/')
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-
-# STATICFILES_FINDERS = (
-#     'django.contrib.staticfiles.finders.FileSystemFinder',
-#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#     'pipeline.finders.CachedFileFinder',
-#     'pipeline.finders.PipelineFinder',
-# )
-
-# MEDIA_ROOT = config('MEDIA_ROOT', default=os.path.join(BASE_DIR, 'media'))
-# MEDIA_URL = config('MEDIA_URL', '/media/')
 
 SESSION_COOKIE_SECURE = config(
     'SESSION_COOKIE_SECURE', default=not DEBUG, cast=bool)
 
-
-# from django_jinja.builtins import DEFAULT_EXTENSIONS
 
 TEMPLATES = [
     {
@@ -133,9 +120,6 @@ TEMPLATES = [
                 'headsupper.base.context_processors.i18n',
                 # 'django.template.context_processors.request', ##???
             ],
-            # 'extensions': DEFAULT_EXTENSIONS + [
-            #    'pipeline.templatetags.ext.PipelineExtension',
-            # ],
         }
     },
     {
@@ -150,7 +134,6 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
-                # 'django.contrib.messages.context_processors.messages',
             ],
         }
     },
@@ -163,29 +146,11 @@ CSP_DEFAULT_SRC = (
 )
 CSP_FONT_SRC = (
     "'self'",
-    # 'http://*.mozilla.net',
-    # 'https://*.mozilla.net',
-    # 'http://*.mozilla.org',
-    # 'https://*.mozilla.org',
     'http://fonts.googleapis.com',
     'https://fonts.googleapis.com',
     'http://fonts.gstatic.com',
     'https://fonts.gstatic.com',
 )
-# CSP_IMG_SRC = (
-#     "'self'",
-#     'http://*.mozilla.net',
-#     'https://*.mozilla.net',
-#     'http://*.mozilla.org',
-#     'https://*.mozilla.org',
-# )
-# CSP_SCRIPT_SRC = (
-#     "'self'",
-#     'http://*.mozilla.org',
-#     'https://*.mozilla.org',
-#     'http://*.mozilla.net',
-#     'https://*.mozilla.net',
-# )
 CSP_STYLE_SRC = (
     "'self'",
     "'unsafe-inline'",
