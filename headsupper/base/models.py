@@ -18,7 +18,6 @@ class Project(models.Model):
     send_to = models.TextField()
     send_cc = models.TextField(blank=True, null=True)
     send_bcc = models.TextField(blank=True, null=True)
-    cc_commit_author = models.BooleanField(default=False)
 
     # If this is set to true, don't react to individual commit
     # payloads, but only on commits that are tags, and then

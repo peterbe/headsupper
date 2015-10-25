@@ -84,7 +84,6 @@ class Tests(TestCase):
             json.loads(response.content),
             {'projects': [{
                 'case_sensitive_trigger_word': False,
-                'cc_commit_author': False,
                 'github_full_name': 'peterbe/headsupper',
                 'github_webhook_secret': 'secret',
                 'id': project.pk,
