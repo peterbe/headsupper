@@ -87,7 +87,7 @@ class Tests(TestCase):
                 'cc_commit_author': False,
                 'github_full_name': 'peterbe/headsupper',
                 'github_webhook_secret': 'secret',
-                'key': project.pk,
+                'id': project.pk,
                 'on_tag_only': False,
                 'send_to': 'mail@example.com',
                 'send_cc': None,

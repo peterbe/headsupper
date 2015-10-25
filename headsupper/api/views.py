@@ -55,7 +55,6 @@ def csrfmiddlewaretoken(request):
 
 def project_to_dict(project):
     p = model_to_dict(project)
-    p['key'] = p.pop('id')
     p.pop('creator')
     return p
 
