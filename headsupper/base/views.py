@@ -78,6 +78,12 @@ def home(request):
         )
 
     tag_name = tag_url = None
+    if 'ref' not in body and body.get('hook'):
+        # it's a test push!
+        ping.http_error = 200
+        ping.save()
+        return http.HttpResponse("Test hook\n")
+
     if body['ref'].startswith('refs/tags'):
         # it might be a tag!
         __, tag_name = body['ref'].split('refs/tags/')
@@ -122,15 +128,7 @@ def home(request):
             ping.save()
             return http.HttpResponse("Not the right branch\n")
 
-        try:
-            commits = body['commits']
-        except KeyError:
-            # it could be a test ping or something
-            if body['hook']:
-                ping.http_error = 200
-                ping.save()
-                return http.HttpResponse("Test hook commit push\n")
-            raise
+        commits = body['commits']
 
     messages = find_commits_messages(
         project,
