@@ -25,6 +25,8 @@ class Project(models.Model):
     # find all the commits in that tag range.
     on_tag_only = models.BooleanField(default=False)
 
+    on_branch = models.CharField(default='master', blank=True, max_length=200)
+
     creator = models.ForeignKey(settings.AUTH_USER_MODEL)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)

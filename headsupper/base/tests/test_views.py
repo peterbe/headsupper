@@ -132,6 +132,7 @@ class Tests(TestCase):
             send_to='peterbe@example.com',
             creator=self.user,
         )
+        assert project.on_branch == 'master'
         response = self._send('first-line', 'secret')
         self.assertEqual(response.status_code, 201)
         email = mail.outbox[-1]
@@ -144,6 +145,24 @@ class Tests(TestCase):
         ping, = Payload.objects.all()
         self.assertEqual(project, ping.project)
         self.assertEqual(ping.http_error, 201)
+
+    def test_wrong_branch(self):
+        project = Project.objects.create(
+            github_full_name='peterbe/headsupper',
+            github_webhook_secret='secret',
+            send_to='peterbe@example.com',
+            creator=self.user,
+            on_branch='deployment',
+        )
+        response = self._send('first-line', 'secret')
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('Not the right branch' in response.content)
+        assert len(mail.outbox) == 0
+
+        ping, = Payload.objects.all()
+        self.assertEqual(project, ping.project)
+        self.assertEqual(ping.http_error, 200)
+        self.assertFalse(ping.messages)
 
     @mock.patch('requests.get')
     def test_tagged_commit(self, rget):
