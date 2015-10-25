@@ -5,7 +5,6 @@ TODO
 
 * ability to see past payloads
 
-* Clean away all django-pipeline or jinja junk we don't need
 
 
 DONE
@@ -24,3 +23,5 @@ DONE
 * Add a note at the bottom of the instructions that says to expect an
   email from `Headsupper.io <oi@headsupper.io>` that might need to be
   manually approved from your spam folder.
+
+* Clean away all django-pipeline
