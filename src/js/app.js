@@ -21,7 +21,7 @@ let lazyLoadCSS = (() => {
   };
 })();
 
-const HANDWRITING_FONT_URL = '//fonts.googleapis.com/css?family=Handlee';
+const HANDWRITING_FONT_URL = '//fonts.googleapis.com/css?family=Handlee&subset=latin';
 
 
 class Form extends React.Component {
