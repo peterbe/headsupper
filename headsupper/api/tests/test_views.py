@@ -103,6 +103,10 @@ class Tests(TestCase):
                 'send_bcc': None,
                 'trigger_word': 'Headsup',
                 'on_branch': 'master',
+                'payloads': {
+                    'times_used': 0,
+                    'times_messages_sent': 0,
+                }
             }]}
         )
 

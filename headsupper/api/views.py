@@ -7,7 +7,7 @@ from django.utils.functional import wraps
 from django.views.decorators.http import require_POST
 from django.forms.models import model_to_dict
 
-from headsupper.base.models import Project
+from headsupper.base.models import Project, Payload
 from . import forms
 from . import utils
 
@@ -65,7 +65,17 @@ def list_projects(request):
     projects = []
     qs = Project.objects.filter(creator=request.user)
     for project in qs.order_by('created'):
-        projects.append(project_to_dict(project))
+        p = project_to_dict(project)
+        payloads = {}
+        payloads['times_used'] = Payload.objects.filter(
+            project=project,
+        ).count()
+        payloads['times_messages_sent'] = Payload.objects.filter(
+            project=project,
+            http_error=201,
+        ).count()
+        p['payloads'] = payloads
+        projects.append(p)
     return http.JsonResponse({'projects': projects})
 
 
