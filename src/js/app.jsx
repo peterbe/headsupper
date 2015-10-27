@@ -346,6 +346,10 @@ class ProjectDetailsTable extends React.Component {
     return <table className="ui compact table">
       <tbody>
         <tr>
+          <th>GitHub Webhook Secret</th>
+          <td><code>{project.github_webhook_secret}</code></td>
+        </tr>
+        <tr>
           <th>On Branch</th>
           <td><code>{project.on_branch}</code></td>
         </tr>
@@ -418,7 +422,8 @@ class ProjectsTable extends React.Component {
         </h3>
       </td>
       <td className="single line">
-        <code>{project.github_webhook_secret}</code>
+        <span title="Total times used">{project.payloads.times_used}</span> &nbsp;
+        (<span title="Number of times it has found something to email about">{project.payloads.times_messages_sent}</span>)
       </td>
       <td>
         {project.send_to}
@@ -457,7 +462,7 @@ class ProjectsTable extends React.Component {
         <thead>
           <tr>
             <th>GitHub Full Name</th>
-            <th>GitHub Webhook Secret</th>
+            <th>Times Used</th>
             <th>Send to</th>
             <th></th>
           </tr>
