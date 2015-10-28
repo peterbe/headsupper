@@ -47,6 +47,43 @@ let projectFinder = (() => {
   }
 })();
 
+
+let findRepos = (() => {
+  let loaded = {};
+  return (user, q, maxCount) => {
+    maxCount = maxCount || 6;
+    if (loaded[user+q] !== undefined) {  // cache hit
+      let promise = new Promise((resolve) => {
+        resolve(loaded[user+q]);
+      });
+      return promise;
+    } else {  // cache miss
+      let url = 'https://api.github.com/search/repositories?q=';
+      url += encodeURIComponent(q + ' ' + 'user:' + user);
+      url += '&sort=updated&order=desc';
+      return fetch(url)
+      .then((response) => {
+        return response.json()
+      })
+      .then((results) => {
+        if (results && results.items) {
+          let names = results.items.map((project) => {
+            return project.full_name;
+          })
+          return names.slice(0, maxCount);
+        } else {
+          console.warn(results);
+          return [];
+        }
+      })
+      .catch((ex) => {
+        console.warn(ex);
+      })
+    }
+  };
+})();
+
+
 const HANDWRITING_FONT_URL = '//fonts.googleapis.com/css?family=Handlee&subset=latin';
 
 
@@ -60,6 +97,7 @@ class Form extends React.Component {
         loading: false,
         errors: null,
         previewProject: null,
+        suggestions: [],
     };
   }
 
@@ -131,12 +169,13 @@ class Form extends React.Component {
             ref.value = '';
           }
         });
-        if (this.state.errors !== null) {
-          this.setState({errors: null});
-        }
-        if (this.state.previewProject) {
-          this.setState({previewProject: null});
-        }
+        // reset things
+        this.setState({
+          previewProject: null,
+          errors: null,
+          suggestions: [],
+        });
+        // let the parent know a project was saved
         this.props.onSave(json.project);
       }
     })
@@ -148,15 +187,34 @@ class Form extends React.Component {
 
   previewGitHubProject(event) {
     if (event.target.value) {
-      projectFinder(event.target.value)
-      .then((project) => {
-        if (project !== undefined) {  // it'll be undefined on exceptions
-          // this `project` might be null, and we distinguish that
-          // from null by making it a {} which is truish.
-          this.setState({previewProject: project || {}});
-        }
+      // wait a little bit in case the autocomplete suggestion filled in
+      setTimeout(() => {
+        projectFinder(event.target.value)
+        .then((project) => {
+          if (project !== undefined) {  // it'll be undefined on exceptions
+            // this `project` might be null, and we distinguish that
+            // from null by making it a {} which is truish.
+            this.setState({previewProject: project || {}});
+          }
+        });
+      }, 500);
+    }
+  }
+
+  searchSuggestGitHubProject(event) {
+    let value = event.target.value;
+    if (value && value.indexOf('/') > -1 && value.length > (value.indexOf('/') + 2)) {
+      let user = value.split('/')[0];
+      let q = value.split('/')[1];
+      findRepos(user, q)
+      .then((names) => {
+        this.setState({suggestions: names, previewProject: null});
       });
     }
+  }
+
+  onSuggestion(name) {
+    this.refs.github_full_name.value = name;
   }
 
   render() {
@@ -200,11 +258,13 @@ class Form extends React.Component {
 
       <div className={getFieldClassName('github_full_name')}>
         <label>GitHub Full Name</label>
+        { this.state.suggestions.length && !this.state.previewProject ? <PreviewProjectSuggestions names={this.state.suggestions} onSuggestion={this.onSuggestion.bind(this)}/> : null }
         { this.state.previewProject ? <PreviewProject project={this.state.previewProject}/> : null }
         <input
             ref="github_full_name"
             tabIndex="1"
             placeholder="e.g. mozilla/socorro"
+            onChange={this.searchSuggestGitHubProject.bind(this)}
             onBlur={this.previewGitHubProject.bind(this)}
             type="text"/>
       </div>
@@ -304,6 +364,26 @@ class PreviewProject extends React.Component {
         </div>
       )
     }
+  }
+}
+
+
+class PreviewProjectSuggestions extends React.Component {
+
+  render() {
+    return (
+      <div className="ui pointing below label">
+        <b>Is it...?</b>
+          {
+            this.props.names.map((name) => {
+              return <a
+                key={name}
+                onClick={this.props.onSuggestion.bind(this, name)}
+                className="name-suggestions">{name}</a>
+            })
+          }
+      </div>
+    )
   }
 }
 
