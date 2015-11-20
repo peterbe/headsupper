@@ -5,6 +5,7 @@ headsupper
 
 [![Coverage Status](https://coveralls.io/repos/peterbe/headsupper/badge.svg?branch=master&service=github)](https://coveralls.io/github/peterbe/headsupper?branch=master)
 
+
 Run the tests
 -------------
 
