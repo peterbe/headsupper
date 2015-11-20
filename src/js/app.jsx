@@ -810,7 +810,7 @@ class App extends React.Component {
       <div className="ui container">
         <div >
 
-          <h1 id="title">Headsupper</h1>
+          <h1 id="title">Heads'upper</h1>
 
           {this.props.children}
 
