@@ -6,6 +6,11 @@ headsupper
 [![Coverage Status](https://coveralls.io/repos/peterbe/headsupper/badge.svg?branch=master&service=github)](https://coveralls.io/github/peterbe/headsupper?branch=master)
 
 
+Demo
+----
+
+I did a demo of this at the [November Mozilla Beer & Tell](https://air.mozilla.org/webdev-beer-and-tell-november-2015/#@26s)
+
 Run the tests
 -------------
 
