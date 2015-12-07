@@ -822,6 +822,7 @@ class App extends React.Component {
               <Link to="/about" className="item">About</Link>
               <a className="item" href="http://www.peterbe.com">By @peterbe</a>
               <a className="item" href="https://github.com/peterbe/headsupper">On GitHub</a>
+              <a className="item" href="http://www.peterbe.com/plog/headsupper.io">Blog post</a>
             </div>
           </div>
         </div>

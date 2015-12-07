@@ -11,6 +11,13 @@ Demo
 
 I did a demo of this at the [November Mozilla Beer & Tell](https://air.mozilla.org/webdev-beer-and-tell-november-2015/#@26s)
 
+
+Blog post
+---------
+
+[Here's the blog post](http://www.peterbe.com/plog/headsupper.io)
+about the launch of Headsupper.io.
+
 Run the tests
 -------------
 
