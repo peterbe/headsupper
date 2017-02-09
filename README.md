@@ -1,6 +1,10 @@
 headsupper
 ==========
 
+## UPDATE
+
+The site headsupper.io has been discontinued.
+
 [![Build Status](https://travis-ci.org/peterbe/headsupper.svg?branch=master)](https://travis-ci.org/peterbe/headsupper)
 
 [![Coverage Status](https://coveralls.io/repos/peterbe/headsupper/badge.svg?branch=master&service=github)](https://coveralls.io/github/peterbe/headsupper?branch=master)
